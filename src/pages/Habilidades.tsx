@@ -15,7 +15,7 @@ const About: React.FC = ({ posts }: InferGetStaticPropsType<typeof getStaticProp
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  // const data = await fetch("")
+  const data = await fetch("https://mywebexperience.vercel.app/api/Skills/getAll")
 
   return {
     props: {}
