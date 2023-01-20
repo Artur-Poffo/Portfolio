@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
+import ISkill from '@/interfaces/ISkills'
 import loadDB from '@/utils/db'
-import Skill, { ISkill } from "../../../utils/Models/SkillModel"
+import Skill from "../../../utils/Models/SkillModel"
 
 
 type Data = {
