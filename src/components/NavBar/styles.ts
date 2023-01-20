@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Nav = styled.nav`
   width: 100vw;
   height: 7vh;
-  padding: 10px;
 
   background-color: var(--background);
   box-shadow: 0px 0px 20px var(--contrast);

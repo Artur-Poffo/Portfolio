@@ -8,7 +8,7 @@ import AvatarJoy from "@/components/AvatarJoy"
 const About: React.FC = () => {
   return (
     <>
-      <DefaultTitle text="Sobre:" />
+      <DefaultTitle text="Sobre:" key={"title about"} />
 
       <Container as={motion.div} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .6 }}  >
         <AvatarJoy />
