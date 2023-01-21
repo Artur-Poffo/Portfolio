@@ -1,37 +1,21 @@
 import { InferGetStaticPropsType } from 'next'
 import { GetStaticProps } from "next"
-import { Container, Content, Info, ContainerSkills } from "../styles/pages/habilidades"
+import { Container } from "../styles/pages/habilidades"
 
-import ISkill from '@/interfaces/ISkills'
-import { motion } from 'framer-motion'
+import Layout from '@/components/Layout'
 import DefaultTitle from "@/components/DefaultTitle"
+import GridSkills from '@/components/SkillCard/Grid'
 
-const About: React.FC = ({ AllSkills }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Skills: React.FC = ({ AllSkills }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
-      <DefaultTitle text='Habilidades:' />
+      <Layout>
+        <DefaultTitle text='Habilidades:' key={"Skills Page"} />
 
-      <Container as={motion.div} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .6 }}>
-        <Content>
-          <Info>
-            <h1>Minhas Habilidades:</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem iure qui nesciunt odio error pariatur laudantium corrupti, saepe, dolorum quo deserunt nemo, repudiandae nobis amet fuga autem? Nihil, nostrum quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro harum obcaecati laudantium dolore amet a sint quae consequuntur ipsum? At dolore deserunt maiores earum obcaecati aut, ullam laborum eaque nesciunt!
-            </p>
-          </Info>
-          <ContainerSkills>
-            <ul>
-              {AllSkills.map((skill: ISkill, index: number) => {
-                return (
-                  <>
-                    <li key={index}>{skill.name}</li>
-                  </>
-                )
-              })}
-            </ul>
-          </ContainerSkills>
-        </Content>
-      </Container>
+        <Container>
+          <GridSkills Skills={AllSkills} />
+        </Container>
+      </Layout>
     </>
   )
 }
@@ -43,8 +27,9 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       AllSkills: res.Skills
-    }
+    },
+    revalidate: 120
   }
 }
 
-export default About
+export default Skills

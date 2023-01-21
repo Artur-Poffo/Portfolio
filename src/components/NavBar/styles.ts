@@ -2,12 +2,11 @@ import styled from "styled-components";
 
 export const Nav = styled.nav`
   width: 100vw;
-  height: 7vh;
+  padding: 20px 0;
 
   background-color: var(--background);
   box-shadow: 0px 0px 20px var(--contrast);
 
-  position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -42,4 +41,8 @@ export const Nav = styled.nav`
   }
 
   z-index: 999;
+
+  @media (max-width: 530px) {
+    display: none;
+  }
 `

@@ -1,23 +1,25 @@
 import { GetStaticProps } from "next"
 import { Container, Info } from "../styles/pages/sobre"
 
-import { motion } from "framer-motion"
+import Layout from "@/components/Layout"
 import DefaultTitle from "@/components/DefaultTitle"
-import AvatarJoy from "@/components/AvatarJoy"
+import AvatarImage from "@/components/AvatarImage"
 
 const About: React.FC = () => {
   return (
     <>
-      <DefaultTitle text="Sobre:" key={"title about"} />
+      <Layout>
+        <DefaultTitle text="Sobre:" key={"About Page"} />
 
-      <Container as={motion.div} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .6 }}  >
-        <AvatarJoy />
+        <Container>
+          <AvatarImage />
 
-        <Info>
-          <h1>Olá,</h1>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut explicabo officia ducimus quasi doloremque quis hic, vero tempora! Recusandae, sapiente eum porro impedit explicabo necessitatibus aut. Quo tenetur veritatis facilis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nobis aliquid cum fugit saepe unde, optio, molestiae quasi itaque, expedita facilis recusandae laudantium veniam sequi neque ipsam harum ipsum? Corporis.</p>
-        </Info>
-      </Container>
+          <Info>
+            <h1>Olá,</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Exercitationem iure qui nesciunt odio error pariatur laudantium corrupti, saepe, dolorum quo deserunt nemo, repudiandae nobis amet fuga autem ? Nihil, nostrum quod.Lorem ipsum dolor sit amet consectetur adipisicing elit.Porro harum obcaecati laudantium dolore amet a sint quae consequuntur ipsum ? At dolore deserunt maiores earum obcaecati aut, ullam laborum eaque nesciunt!</p>
+          </Info>
+        </Container>
+      </Layout>
     </>
   )
 }

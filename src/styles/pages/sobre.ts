@@ -2,22 +2,33 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100vw;
-  height: 100vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 50px;
+
+  @media (max-width: 940px) {
+    gap: 30px;
+    padding: 10px;
+    flex-direction: column;
+  }
 `
 
 export const Info = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 10px;
-  max-width: 500px;
-  letter-spacing: 1.5px;
+  max-width: 560px;
 
   h1 {
-    align-self: flex-start;
+    font-size: 3rem;
     font-weight: 300;
+    letter-spacing: 3px;
+  }
+
+  p {
+    font-size: 1.08rem;
+    line-height: 24px;
   }
 `

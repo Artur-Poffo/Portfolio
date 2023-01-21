@@ -26,7 +26,7 @@ export default createGlobalStyle`
 
   @media (max-width: 510px) {
     ::-webkit-scrollbar {
-      display: none;
+      width: 5px;
     }
   }
 
@@ -50,7 +50,7 @@ export default createGlobalStyle`
 
   :root {
     --background: #121214;
-    --contrast: #0A0A0C;
+    --contrast: #202024;
     --primary: #8257e5;
     --secondary: #b6b7f6;
     --text: #E1E1E1;

@@ -1,4 +1,5 @@
 import GlobalStyles from '@/styles/globals'
+import { AnimatePresence } from 'framer-motion'
 import type { AppProps } from 'next/app'
 
 import Head from "next/head"
@@ -12,7 +13,10 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
 
       <NavBar items={["Sobre", "Habilidades", "Projetos", "Contato"]} />
-      <Component {...pageProps} />
+
+      <AnimatePresence mode='wait' initial={true} >
+        <Component {...pageProps} />
+      </AnimatePresence>
       <GlobalStyles />
     </>
   )
