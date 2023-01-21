@@ -23,7 +23,7 @@ export const Card = styled.div`
 `
 
 export const Grid = styled.div`
-  padding: 30px;
+  padding: 30px 15px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;

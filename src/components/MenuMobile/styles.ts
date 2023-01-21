@@ -44,9 +44,10 @@ export const ListMobile = styled.div<Props>`
   align-items: center;
   justify-content: center;
   gap: 80px;
-  transition: all .5s ease;
+  transition: all .4s ease;
   opacity: ${props => props.IsOpen ? 1 : 0};
-  z-index: ${props => props.IsOpen ? 998 : 0};
+  margin-left: ${props => props.IsOpen ? 0 : "-100%"};
+  z-index: 998;
 
   h1 {
     text-align: center;

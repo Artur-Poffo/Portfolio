@@ -9,8 +9,7 @@ export const Container = styled.div`
   gap: 50px;
 
   @media (max-width: 940px) {
-    gap: 30px;
-    padding: 10px;
+    padding: 30px 15px;
     flex-direction: column;
   }
 `
