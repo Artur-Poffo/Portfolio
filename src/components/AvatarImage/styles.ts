@@ -8,7 +8,12 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 5px;
+  padding: 8px;
+  transition: all .4s ease;
+
+  &:hover {
+    padding: 0;
+  }
 `
 
 export const Avatar = styled.img`
