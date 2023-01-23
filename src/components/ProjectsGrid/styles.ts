@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Grid = styled.ul`
   display: grid;
-  grid-template-columns: 2fr 2fr;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   gap: 40px 20px;
 

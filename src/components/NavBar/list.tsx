@@ -11,7 +11,7 @@ const List: React.FC<Props> = ({ items, setOpen }) => {
       <ul>
         {items.map((item, index) => {
           return (
-            <Link href={item} onClick={() => setOpen ? setOpen(false) : ""} key={index} ><li>{item}</li></Link>
+            <Link href={`/` + item} onClick={() => setOpen ? setOpen(false) : ""} key={index} ><li>{item}</li></Link>
           )
         })}
       </ul>

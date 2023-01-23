@@ -3,7 +3,11 @@ import { Container, VideoContainer, Video, HeaderText } from "./styles"
 const isProd = process.env.IsProd
 const baseAssetUrl = isProd ? 'https://mywebexperience.vercel.app' : ''
 
-const VideoBackground: React.FC = () => {
+interface Props {
+  Title?: string
+}
+
+const VideoBackground: React.FC<Props> = ({ Title }) => {
   return (
     <>
       <Container>
@@ -22,7 +26,7 @@ const VideoBackground: React.FC = () => {
 
         <HeaderText>
           <h1>
-            Projetos
+            {Title ? Title : "Projetos"}
           </h1>
         </HeaderText>
       </Container>

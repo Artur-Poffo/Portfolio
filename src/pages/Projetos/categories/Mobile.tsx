@@ -1,15 +1,15 @@
-import { Container } from "../../styles/pages/projetos"
+import { Container } from "../../../styles/pages/projetos"
 import { GetStaticProps } from "next"
 import { InferGetStaticPropsType } from 'next'
 
 import ProjectsHeader from "@/components/ProjectsHeader"
 import ProjectsGrid from "@/components/ProjectsGrid"
 
-const Projects: React.FC = ({ Projects }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Mobile: React.FC = ({ Projects }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
       <Container>
-        <ProjectsHeader />
+        <ProjectsHeader Title="Mobile" />
 
         <ProjectsGrid Projects={Projects} />
       </Container>
@@ -18,15 +18,15 @@ const Projects: React.FC = ({ Projects }: InferGetStaticPropsType<typeof getStat
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("https://mywebexperience.vercel.app/api/Projects/getAll")
+  const res = await fetch("https://mywebexperience.vercel.app/api/Projects/categories/Mobile")
   const data = await res.json()
 
   return {
     props: {
-      Projects: data.AllProjects
+      Projects: data.Projects
     },
     revalidate: 120
   }
 }
 
-export default Projects
+export default Mobile
