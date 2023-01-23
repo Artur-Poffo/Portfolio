@@ -16,7 +16,15 @@ export default function App({ Component, pageProps }: AppProps) {
       <MenuMobile items={["Sobre", "Habilidades", "Projetos", "Contato"]} />
       <NavBar items={["Sobre", "Habilidades", "Projetos", "Contato"]} />
 
-      <AnimatePresence mode='wait' initial={true} >
+      <AnimatePresence
+        mode='wait'
+        initial={true}
+        onExitComplete={() => {
+          if (typeof window !== 'undefined') {
+            window.scrollTo({ top: 0 })
+          }
+        }}
+      >
         <Component {...pageProps} />
       </AnimatePresence>
       <GlobalStyles />

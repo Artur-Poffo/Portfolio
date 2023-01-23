@@ -1,4 +1,3 @@
-import { Container } from "../../../styles/pages/projetos"
 import { GetStaticProps } from "next"
 import { InferGetStaticPropsType } from 'next'
 
@@ -8,11 +7,9 @@ import ProjectsGrid from "@/components/ProjectsGrid"
 const Mobile: React.FC = ({ Projects }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
-      <Container>
-        <ProjectsHeader Title="Mobile" />
+      <ProjectsHeader Title="Mobile" />
 
-        <ProjectsGrid Projects={Projects} />
-      </Container>
+      <ProjectsGrid Projects={Projects} />
     </>
   )
 }

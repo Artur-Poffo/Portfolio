@@ -1,4 +1,4 @@
-import { Grid } from "./styles"
+import { Grid, Container } from "./styles"
 import ProjectsCard from "../ProjectsCard"
 
 import IProjects from "@/interfaces/IProjects"
@@ -10,13 +10,15 @@ interface Props {
 const ProjectsGrid: React.FC<Props> = ({ Projects }) => {
   return (
     <>
-      <Grid>
-        {Projects?.map((Project, index) => {
-          return (
-            <ProjectsCard ProjectInfo={Project} key={index} />
-          )
-        })}
-      </Grid>
+      <Container>
+        <Grid>
+          {Projects?.map((Project, index) => {
+            return (
+              <ProjectsCard ProjectInfo={Project} key={index} />
+            )
+          })}
+        </Grid>
+      </Container>
     </>
   )
 }

@@ -14,8 +14,8 @@ interface Props {
 const ProjectsCard: React.FC<Props> = ({ ProjectInfo }) => {
   return (
     <>
-      <Card as={motion.div} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .6 }}  >
-        <Link href={`/Projetos/work/${ProjectInfo._id}`} >
+      <Card as={motion.div} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .6, delay: .08 }}  >
+        <Link href={`/Projetos/trabalho/${ProjectInfo._id}`} >
           <Image width={400} height={220} src={ProjectInfo.image} alt="Imagem do Projeto" />
           <div>
             <h2>{ProjectInfo.name}</h2>

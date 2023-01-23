@@ -1,8 +1,5 @@
 import { Container, VideoContainer, Video, HeaderText } from "./styles"
 
-const isProd = process.env.IsProd
-const baseAssetUrl = isProd ? 'https://mywebexperience.vercel.app' : ''
-
 interface Props {
   Title?: string
 }
@@ -14,11 +11,11 @@ const VideoBackground: React.FC<Props> = ({ Title }) => {
         <VideoContainer>
           <Video autoPlay muted loop >
             <source
-              src={baseAssetUrl + '/ProjectsHeader.webm'}
+              src={'/ProjectsHeader.webm'}
               type="video/webm; codecs=vp9"
             />
             <source
-              src={baseAssetUrl + '/ProjectsHeader.m4v'}
+              src={'/ProjectsHeader.m4v'}
               type="video/mp4; codecs=hvc1"
             />
           </Video>

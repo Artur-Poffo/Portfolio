@@ -1,5 +1,6 @@
 import { Container, Content } from "./styles"
 
+import Layout from "../Layout"
 import VideoBackground from "@/components/VideoBackground"
 import ProjectsFilter from "@/components/ProjectsFilter"
 
@@ -10,13 +11,15 @@ interface Props {
 const ProjectsHeader: React.FC<Props> = ({ Title }) => {
   return (
     <>
-      <Container>
-        <VideoBackground Title={Title} />
+      <Layout>
+        <Container>
+          <VideoBackground Title={Title} />
 
-        <Content>
-          <ProjectsFilter Links={["Front-End", "Back-End", "Full-Stack", "Mobile"]} />
-        </Content>
-      </Container>
+          <Content>
+            <ProjectsFilter Links={["Front-End", "Back-End", "Full-Stack", "Mobile"]} />
+          </Content>
+        </Container>
+      </Layout>
     </>
   )
 }

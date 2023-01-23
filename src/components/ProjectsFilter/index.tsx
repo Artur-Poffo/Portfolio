@@ -14,9 +14,13 @@ const ProjectsFilter: React.FC<Props> = ({ Links }) => {
         <div>
           <span>Filtrar por categorias:</span>
           <ul>
+            <Link href={`/Projetos`} >
+              <ListItem text={"Todos"} />
+            </Link>
+
             {Links.map((LinkName, index) => {
               return (
-                <Link href={`/Projetos/categories/${LinkName}`} key={index} >
+                <Link href={`/Projetos/categorias/${LinkName}`} key={index} >
                   <ListItem text={LinkName} />
                 </Link>
               )

@@ -1,24 +1,21 @@
-import { Container } from "../../../styles/pages/projetos"
 import { GetStaticProps } from "next"
 import { InferGetStaticPropsType } from 'next'
 
 import ProjectsHeader from "@/components/ProjectsHeader"
 import ProjectsGrid from "@/components/ProjectsGrid"
 
-const FullStack: React.FC = ({ Projects }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const BackEnd: React.FC = ({ Projects }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
-      <Container>
-        <ProjectsHeader Title="Full-Stack" />
+      <ProjectsHeader Title="Back-End" />
 
-        <ProjectsGrid Projects={Projects} />
-      </Container>
+      <ProjectsGrid Projects={Projects} />
     </>
   )
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch("https://mywebexperience.vercel.app/api/Projects/categories/Full-Stack")
+  const res = await fetch("https://mywebexperience.vercel.app/api/Projects/categories/Back-End")
   const data = await res.json()
 
   return {
@@ -29,4 +26,4 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-export default FullStack
+export default BackEnd
