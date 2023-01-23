@@ -2,23 +2,28 @@ import { Card } from "./styles"
 
 import Link from "next/link"
 import Image from "next/image"
+import ListItem from "../ListItem"
 
-const ProjectsCard: React.FC = () => {
+import IProjects from "@/interfaces/IProjects"
+
+interface Props {
+  ProjectInfo: IProjects
+}
+
+const ProjectsCard: React.FC<Props> = ({ ProjectInfo }) => {
   return (
     <>
       <Card>
-        <Link href={"/Projetos/work/dawdkpawdkopawokdpadkmw"} >
-          <Image width={400} height={220} src={"https://lh3.googleusercontent.com/pw/AL9nZEXbAQRN-pNMqhRGMVVD3j9iYmDtEnZrd3SHSouNo5iQtvb7TMCCkoRdx12arNcw7_JKjmFZdXqC4QbIuqscSpAUYy7547J7vFjyD896ROBcmEwZcOTUKmDuzkUfICzE93ysYzLhBLwmFEU_11vStnrI=w1918-h933-no?authuser=0"} alt="Imagem do Projeto" />
+        <Link href={`/Projetos/work/${ProjectInfo._id}`} >
+          <Image width={400} height={220} src={ProjectInfo.image} alt="Imagem do Projeto" />
           <div>
-            <h2>My Blog</h2>
+            <h2>{ProjectInfo.name}</h2>
             <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>Next.js</li>
-              <li>Next.js</li>
-              <li>Next.js</li>
-              <li>Next.js</li>
+              {ProjectInfo.techs.map((tech, index) => {
+                return (
+                  <ListItem key={index} text={tech} />
+                )
+              })}
             </ul>
           </div>
         </Link>

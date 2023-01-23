@@ -1,18 +1,21 @@
 import { Grid } from "./styles"
-
 import ProjectsCard from "../ProjectsCard"
 
-const ProjectsGrid: React.FC = () => {
+import IProjects from "@/interfaces/IProjects"
+
+interface Props {
+  Projects?: Array<IProjects>
+}
+
+const ProjectsGrid: React.FC<Props> = ({ Projects }) => {
   return (
     <>
       <Grid>
-        <ProjectsCard />
-        <ProjectsCard />
-        <ProjectsCard />
-        <ProjectsCard />
-        <ProjectsCard />
-        <ProjectsCard />
-        <ProjectsCard />
+        {Projects?.map((Project, index) => {
+          return (
+            <ProjectsCard ProjectInfo={Project} key={index} />
+          )
+        })}
       </Grid>
     </>
   )

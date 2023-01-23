@@ -6,7 +6,8 @@ const ProjectSchema = new Schema<IProjects>({
   desc: { type: String, required: true },
   content: { type: String, required: true },
   image: { type: String, required: true },
-  techs: { type: [String], required: true }
+  techs: { type: [String], required: true },
+  category: { type: String, required: true }
 })
 
 const Project = models.projects || model<IProjects>('projects', ProjectSchema)

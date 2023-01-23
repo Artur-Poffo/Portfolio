@@ -1,6 +1,6 @@
-import { InferGetStaticPropsType } from 'next'
-import { GetStaticProps } from "next"
 import { Container } from "../styles/pages/habilidades"
+import { GetStaticProps } from "next"
+import { InferGetStaticPropsType } from 'next'
 
 import Layout from '@/components/Layout'
 import DefaultTitle from "@/components/DefaultTitle"
@@ -21,12 +21,12 @@ const Skills: React.FC = ({ AllSkills }: InferGetStaticPropsType<typeof getStati
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const data = await fetch("https://mywebexperience.vercel.app/api/Skills/getAll")
-  const res = await data.json()
+  const res = await fetch("https://mywebexperience.vercel.app/api/Skills/getAll")
+  const data = await res.json()
 
   return {
     props: {
-      AllSkills: res.Skills
+      AllSkills: data.Skills
     },
     revalidate: 120
   }

@@ -1,18 +1,15 @@
-import { Container } from "../../styles/pages/projetos"
 import { GetStaticProps } from "next"
 import { InferGetStaticPropsType } from 'next'
 
 import ProjectsHeader from "@/components/ProjectsHeader"
 import ProjectsGrid from "@/components/ProjectsGrid"
 
-const Projects: React.FC = ({ AllProjects }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const FronEnd: React.FC = ({ AllProjects }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
-      <Container>
-        <ProjectsHeader />
+      <ProjectsHeader />
 
-        <ProjectsGrid Projects={AllProjects} />
-      </Container>
+      <ProjectsGrid />
     </>
   )
 }
@@ -29,4 +26,4 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-export default Projects
+export default FronEnd
