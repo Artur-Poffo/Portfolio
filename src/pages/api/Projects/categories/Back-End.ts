@@ -5,7 +5,7 @@ import Project from "../../../../utils/Models/ProjectModel"
 
 
 type Data = {
-  BackProjects: Array<IProjects>
+  Projects: Array<IProjects>
 }
 
 export default async function handler(
@@ -13,7 +13,7 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   await loadDB()
-  const BackProjects: Array<IProjects> = await Project.find({ category: "Back-End" })
+  const Projects: Array<IProjects> = await Project.find({ category: "Back-End" })
 
-  res.status(200).json({ BackProjects })
+  res.status(200).json({ Projects })
 }

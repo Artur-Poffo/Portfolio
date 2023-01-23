@@ -5,7 +5,7 @@ import Project from "../../../utils/Models/ProjectModel"
 
 
 type Data = {
-  Projects: Array<IProjects>
+  AllProjects: Array<IProjects>
 }
 
 export default async function handler(
@@ -15,5 +15,5 @@ export default async function handler(
   await loadDB()
   const AllProjects: Array<IProjects> = await Project.find({})
 
-  res.status(200).json({ Projects: AllProjects })
+  res.status(200).json({ AllProjects })
 }
