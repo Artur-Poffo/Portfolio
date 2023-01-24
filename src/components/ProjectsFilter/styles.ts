@@ -20,7 +20,7 @@ export const Container = styled.div`
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 10px;
       padding: 0px 10px;
     }
   }

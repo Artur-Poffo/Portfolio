@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100vw;
-  height: 45vh;
+  height: 50vh;
   position: relative;
 `
 
@@ -25,7 +25,7 @@ export const HeaderText = styled.div`
   position: absolute;
   width: 100%;
   text-align: center;
-  margin-top: 20vh;
+  margin-top: 22vh;
 
   h1 {
     font-size: 2rem;

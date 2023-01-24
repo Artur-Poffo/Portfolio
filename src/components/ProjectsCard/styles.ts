@@ -24,6 +24,8 @@ export const Card = styled.li`
     }
 
     div {
+      text-align: center;
+
       h2 {
         letter-spacing: 2.5px;
         margin-bottom: 10px;
@@ -33,7 +35,7 @@ export const Card = styled.li`
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 7px;
+        gap: 10px;
         flex-wrap: wrap;
         max-width: 400px;
 
