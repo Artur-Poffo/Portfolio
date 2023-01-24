@@ -56,3 +56,77 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: center;
 `
+
+export const ProjectText = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+  max-width: 960px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      font-size: 2.25rem;
+      text-transform: capitalize;
+      letter-spacing: .8px;
+      margin: 30px 0;
+
+      @media (max-width: 520px) {
+        font-size: 1.75rem;
+      }
+    }
+
+    p {
+      letter-spacing: .5px;
+      line-height: 1.6;
+      font-size: 1.25rem;
+      margin: 20px 0;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    code {
+      color: var(--secondary);
+      width: max-content;
+      padding: 7px;
+      display: inline;
+      font-family: Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;
+      border-radius: 5px;
+      background-color: var(--contrast);
+    }
+
+    pre {
+      align-self: center;
+      display: block;
+      width: 100%;
+      background-color: var(--contrast);
+      border-radius: 5px;
+      margin: 20px 0;
+
+      code {
+        display: block;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: 1.5;
+        tab-size: 2;
+        hyphens: none;
+      }
+
+    }
+
+    iframe {
+      width: 100%;
+
+      @media (max-width: 520px) {
+        height: 220px;
+      }
+    }
+  }
+`

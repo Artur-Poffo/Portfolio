@@ -1,4 +1,4 @@
-import { Container, ImageBackground, Header, Content } from "../../../styles/pages/trabalho"
+import { Container, ImageBackground, Header, Content, ProjectText } from "../../../styles/pages/trabalho"
 import { ParsedUrlQuery } from 'querystring'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { InferGetStaticPropsType } from 'next'
@@ -25,7 +25,11 @@ const Work: React.FC = ({ info }: InferGetStaticPropsType<typeof getStaticProps>
           </Header>
 
           <Content>
+            <ProjectText>
+              <div dangerouslySetInnerHTML={{ __html: info.content }} >
 
+              </div>
+            </ProjectText>
           </Content>
         </Container>
       </Layout>
