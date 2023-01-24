@@ -1,14 +1,33 @@
+import { Container, ImageBackground, Header, Content } from "../../../styles/pages/trabalho"
 import { ParsedUrlQuery } from 'querystring'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { InferGetStaticPropsType } from 'next'
 
 import Layout from '@/components/Layout'
+import ListItem from "@/components/ListItem"
 
 const Work: React.FC = ({ info }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
       <Layout>
-        <h1>dawdawd</h1>
+        <Container>
+          <ImageBackground image={info.image} />
+
+          <Header>
+            <h1>{info.name}</h1>
+            <ul>
+              {info.techs.map((tech: string, index: any) => {
+                return (
+                  <ListItem key={index} text={tech} />
+                )
+              })}
+            </ul>
+          </Header>
+
+          <Content>
+
+          </Content>
+        </Container>
       </Layout>
     </>
   )
