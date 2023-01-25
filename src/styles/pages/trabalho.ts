@@ -7,7 +7,7 @@ interface IBackground {
 export const Container = styled.div`
   width: 100vw;
   min-height: 100vh;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 `
 
 export const ImageBackground = styled.div<IBackground>`

@@ -3,12 +3,15 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100vw;
   min-height: 100vh;
-  margin-top: 150px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
 
-  @media (max-width: 530px) {
-    margin-top: 10px;
+  a {
+    color: var(--secondary);
+    text-decoration: underline;
   }
 `

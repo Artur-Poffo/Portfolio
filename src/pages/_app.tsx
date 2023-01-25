@@ -5,6 +5,7 @@ import type { AppProps } from 'next/app'
 import Head from "next/head"
 import MenuMobile from '@/components/MenuMobile'
 import NavBar from '@/components/NavBar'
+import Footer from '@/components/Footer'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -27,6 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
       >
         <Component {...pageProps} />
       </AnimatePresence>
+      <Footer />
       <GlobalStyles />
     </>
   )

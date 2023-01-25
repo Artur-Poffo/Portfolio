@@ -3,7 +3,12 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100vw;
   height: 50vh;
+  margin-top: 7vh;
   position: relative;
+
+  @media (max-width: 530px) {
+    margin-top: 0;
+  }
 `
 
 export const VideoContainer = styled.div`
