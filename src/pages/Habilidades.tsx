@@ -10,9 +10,9 @@ const Skills: React.FC = ({ AllSkills }: InferGetStaticPropsType<typeof getStati
   return (
     <>
       <Layout>
-        <DefaultTitle text='Habilidades:' key={"Skills Page"} />
-
         <Container>
+          <DefaultTitle text='Habilidades:' key={"Skills Page"} />
+
           <GridSkills Skills={AllSkills} />
         </Container>
       </Layout>

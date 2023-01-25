@@ -43,7 +43,7 @@ export const Nav = styled.nav`
 
   z-index: 999;
 
-  @media (max-width: 530px) {
+  @media (max-width: 530px) or (max-height: 850px) {
     display: none;
   }
 `

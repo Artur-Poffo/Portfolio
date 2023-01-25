@@ -7,7 +7,7 @@ interface Props {
 export const Hamburguer = styled.div`
   display: none;
 
-  @media (max-width: 530px) {
+  @media (max-width: 530px) or (max-height: 850px) {
     display: flex;
     flex-direction: column;
     align-items: center;

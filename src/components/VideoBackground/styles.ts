@@ -6,7 +6,7 @@ export const Container = styled.div`
   margin-top: 7vh;
   position: relative;
 
-  @media (max-width: 530px) {
+  @media (max-width: 530px) or (max-height: 850px) {
     margin-top: 0;
   }
 `

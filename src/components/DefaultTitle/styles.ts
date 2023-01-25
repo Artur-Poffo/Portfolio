@@ -9,7 +9,7 @@ export const Title = styled.h1`
   letter-spacing: 2px;
   color: var(--primary);
 
-  @media (max-width: 530px) {
+  @media (max-width: 530px) or (max-height: 850px) {
     position: static;
     text-align: center;
     margin: 40px 0;
