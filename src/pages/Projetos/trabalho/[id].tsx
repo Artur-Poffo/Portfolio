@@ -2,6 +2,7 @@ import { Container, ImageBackground, Header, Content, ProjectText } from "../../
 import { ParsedUrlQuery } from 'querystring'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { InferGetStaticPropsType } from 'next'
+import Head from "next/head"
 
 import Layout from '@/components/Layout'
 import ListItem from "@/components/ListItem"
@@ -10,8 +11,25 @@ const Work: React.FC = ({ info }: InferGetStaticPropsType<typeof getStaticProps>
   return (
     <>
       <Layout>
+        <Head>
+          <title>{`${info.name} | Meu Portfolio`}</title>
+          <meta
+            name="description"
+            content={info.desc}
+          />
+          <meta
+            property="og:description"
+            content={info.desc}
+          />
+        </Head>
+
         <Container>
-          <ImageBackground image={info.image} />
+          <ImageBackground image={info.image}>
+            <div>
+              {info.RepoLink ? <a href={info.RepoLink}>Repositório</a> : <></>}
+              {info.VisitLink ? <a href={info.VisitLink}>Visitar Projeto</a> : <></>}
+            </div>
+          </ImageBackground>
 
           <Header>
             <h1>{info.name}</h1>

@@ -11,9 +11,10 @@ export const Container = styled.div`
 `
 
 export const ImageBackground = styled.div<IBackground>`
+  position: relative;
   width: 100vw;
   height: 70vh;
-  background-image: url(${props => props.image});
+  background: radial-gradient(farthest-side at 45% 100%, transparent, rgb(26, 29, 41)), url(${props => props.image});
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -21,6 +22,25 @@ export const ImageBackground = styled.div<IBackground>`
   border: 3px solid var(--contrast);
   opacity: .8;
   margin-bottom: 40px;
+
+  div {
+    position: absolute;
+    left: 20px;
+    bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    a {
+      display: block;
+      padding: 10px 20px;
+      background-color: var(--primary);
+      color: var(--text);
+      border-radius: 3px;
+      text-align: center;
+      letter-spacing: 1.5px;
+    }
+  }
 `
 
 export const Header = styled.div`

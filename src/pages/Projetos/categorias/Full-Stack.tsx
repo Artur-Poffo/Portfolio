@@ -1,5 +1,6 @@
 import { GetStaticProps } from "next"
 import { InferGetStaticPropsType } from 'next'
+import Head from "next/head"
 
 import ProjectsHeader from "@/components/ProjectsHeader"
 import ProjectsGrid from "@/components/ProjectsGrid"
@@ -7,6 +8,10 @@ import ProjectsGrid from "@/components/ProjectsGrid"
 const FullStack: React.FC = ({ Projects }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
+      <Head>
+        <title>Projetos Full-Stack | Meu Portfolio</title>
+      </Head>
+
       <ProjectsHeader Title="Full-Stack" />
 
       <ProjectsGrid Projects={Projects} />

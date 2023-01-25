@@ -1,6 +1,7 @@
-import { Container } from "../../styles/pages/projetos"
 import { GetStaticProps } from "next"
 import { InferGetStaticPropsType } from 'next'
+import Head from "next/head"
+import { Container } from "../../styles/pages/projetos"
 
 import ProjectsHeader from "@/components/ProjectsHeader"
 import ProjectsGrid from "@/components/ProjectsGrid"
@@ -9,6 +10,10 @@ const Projects: React.FC = ({ Projects }: InferGetStaticPropsType<typeof getStat
   return (
     <>
       <Container>
+        <Head>
+          <title>Projetos | Meu Portfolio</title>
+        </Head>
+
         <ProjectsHeader />
 
         <ProjectsGrid Projects={Projects} />

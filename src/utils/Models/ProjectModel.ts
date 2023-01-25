@@ -7,7 +7,9 @@ const ProjectSchema = new Schema<IProjects>({
   content: { type: String, required: true },
   image: { type: String, required: true },
   techs: { type: [String], required: true },
-  category: { type: String, required: true }
+  category: { type: String, required: true },
+  RepoLink: { type: String, required: false },
+  VisitLink: { type: String, required: false }
 })
 
 const Project = models.projects || model<IProjects>('projects', ProjectSchema)

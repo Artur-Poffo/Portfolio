@@ -1,4 +1,5 @@
 import { GetStaticProps } from "next"
+import Head from "next/head"
 import { Container, Info } from "../styles/pages/home"
 
 import Layout from "@/components/Layout"
@@ -11,6 +12,18 @@ const Home: React.FC = () => {
   return (
     <>
       <Layout>
+        <Head>
+          <title>Home | Meu Portfolio</title>
+          <meta
+            name="description"
+            content="Tenho 16 anos e tenho interesse em me tornar um Desenvolvedor Full-Stack, neste Portfolio apresento minhas informações e meus projetos mais recentes!"
+          />
+          <meta
+            property="og:description"
+            content="Tenho 16 anos e tenho interesse em me tornar um Desenvolvedor Full-Stack, neste Portfolio apresento minhas informações e meus projetos mais recentes!"
+          />
+        </Head>
+
         <Container>
           <Info>
             <h1>Artur Poffo</h1>

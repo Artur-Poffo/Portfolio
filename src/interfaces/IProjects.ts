@@ -6,5 +6,7 @@ export default interface IProjects {
   image: string
   techs: Array<String>
   category: string
+  RepoLink?: string
+  VisitLink?: string
   __v: number
 }

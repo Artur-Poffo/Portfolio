@@ -1,5 +1,6 @@
 import { GetStaticProps } from "next"
 import { InferGetStaticPropsType } from 'next'
+import Head from "next/head"
 
 import ProjectsHeader from "@/components/ProjectsHeader"
 import ProjectsGrid from "@/components/ProjectsGrid"
@@ -7,6 +8,10 @@ import ProjectsGrid from "@/components/ProjectsGrid"
 const BackEnd: React.FC = ({ Projects }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
+      <Head>
+        <title>Projetos Back-End | Meu Portfolio</title>
+      </Head>
+
       <ProjectsHeader Title="Back-End" />
 
       <ProjectsGrid Projects={Projects} />

@@ -29,5 +29,11 @@ export const Info = styled.div`
   p {
     font-size: 1.08rem;
     line-height: 24px;
+
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+      letter-spacing: 1.2px;
+    }
   }
 `

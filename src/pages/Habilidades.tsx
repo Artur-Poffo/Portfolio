@@ -1,5 +1,6 @@
-import { Container } from "../styles/pages/habilidades"
 import { GetStaticProps } from "next"
+import Head from "next/head"
+import { Container } from "../styles/pages/habilidades"
 import { InferGetStaticPropsType } from 'next'
 
 import Layout from '@/components/Layout'
@@ -10,6 +11,10 @@ const Skills: React.FC = ({ AllSkills }: InferGetStaticPropsType<typeof getStati
   return (
     <>
       <Layout>
+        <Head>
+          <title>Habilidades | Meu Portfolio</title>
+        </Head>
+
         <Container>
           <DefaultTitle text='Habilidades:' key={"Skills Page"} />
 
