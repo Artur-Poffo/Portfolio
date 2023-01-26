@@ -11,11 +11,11 @@ const About: React.FC = () => {
   return (
     <>
       <Layout>
+        <DefaultTitle text="Sobre:" key={"About Page"} />
+
         <Head>
           <title>Sobre | Meu Portfolio</title>
         </Head>
-
-        <DefaultTitle text="Sobre:" key={"About Page"} />
 
         <Container>
           <AvatarImage />

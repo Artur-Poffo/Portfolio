@@ -12,6 +12,6 @@ export const Title = styled.h1`
   @media (max-width: 530px) or (max-height: 850px) {
     position: static;
     text-align: center;
-    margin: 40px 0;
+    margin: 20px 0;
   }
 `
