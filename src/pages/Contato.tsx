@@ -9,13 +9,13 @@ import ContactForm from "@/components/ContactForm"
 const Contato: React.FC = () => {
   return (
     <Layout>
-      <DefaultTitle text="Contato:" key={"Contact Title"} />
-
       <Head>
         <title>Contato | Meu Portfolio</title>
       </Head>
 
       <Container>
+        <DefaultTitle text="Contato:" key={"Contact Title"} />
+
         <ContactForm />
       </Container>
     </Layout>

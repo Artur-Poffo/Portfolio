@@ -11,7 +11,6 @@ export const Container = styled.div`
   @media (max-width: 940px) {
     padding: 30px 15px;
     flex-direction: column;
-    justify-content: flex-start;
   }
 `
 
