@@ -1,20 +1,35 @@
 import type { Config } from 'tailwindcss'
+const { withTV } = require('tailwind-variants/transformer')
 
-const config: Config = {
+const config: Config = withTV({
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/sections/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+      colors: {
+        'brand-gray': {
+          100: "#FFFFFF",
+          200: "#F4F4F4",
+          300: "#D6D6D6",
+          400: "#7A7A7A",
+          600: "#181818",
+          700: "#192235",
+          900: "#0B0B0D"
+        },
+
+        'brand-blue': {
+          100: '#0284c7',
+          200: '#0369a1',
+          300: "#30506E",
+          400: "#223459"
+        }
+      }
     },
   },
-  plugins: [],
-}
+  plugins: [require('tailwind-scrollbar')],
+})
 export default config
