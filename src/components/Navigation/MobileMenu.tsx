@@ -44,7 +44,7 @@ export function MobileMenu({ links, specialLinks }: NavigationProps) {
               <ul>
                 {specialLinks.map(link => {
                   return (
-                    <NavLink key={link.name} name={link.name} to={link.to} useNextLink={link.useNextLink} />
+                    <NavLink key={link.name} onClick={() => setIsOpenMenu(false)} name={link.name} to={link.to} useNextLink={link.useNextLink} />
                   )
                 })}
               </ul>
