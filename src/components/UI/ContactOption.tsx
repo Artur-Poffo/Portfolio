@@ -7,13 +7,12 @@ interface ContactOptionProps {
   iconSize: number
   optionName: string
   link: string
-  delay?: number
 }
 
-export function ContactOption({ Icon, iconSize, optionName, link, delay = 0 }: ContactOptionProps) {
+export function ContactOption({ Icon, iconSize, optionName, link }: ContactOptionProps) {
   return (
     <Link href={link} >
-      <DefaultCard className="flex items-center gap-4 cursor-pointer" delay={delay} >
+      <DefaultCard className="flex items-center gap-4 cursor-pointer" >
         <Icon size={iconSize} />
         <span className="font-mono font-bold text-brand-gray-100" >{optionName}</span>
       </DefaultCard>

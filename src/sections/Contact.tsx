@@ -12,10 +12,10 @@ export function ContactSection() {
       <div className="max-w-lg mx-auto flex flex-col gap-4 text-center mt-12" >
         <h2 className="text-brand-gray-100 text-3xl font-mono font-bold mb-4" >Entre em contato pelo:</h2>
 
-        <ContactOption optionName="E-mail" Icon={AiOutlineMail} iconSize={32} link="mailto:arturpoffop@gmail.com" delay={0.1} />
-        <ContactOption optionName="LinkedIn" Icon={AiFillLinkedin} iconSize={32} link="https://www.linkedin.com/in/arturpoffo/" delay={0.2} />
-        <ContactOption optionName="Instagram" Icon={AiFillInstagram} iconSize={32} link="https://www.instagram.com/artur_poffo/" delay={0.3} />
-        <ContactOption optionName="GitHub" Icon={AiFillGithub} iconSize={32} link="https://github.com/Artur-Poffo" delay={0.4} />
+        <ContactOption optionName="E-mail" Icon={AiOutlineMail} iconSize={32} link="mailto:arturpoffop@gmail.com" />
+        <ContactOption optionName="LinkedIn" Icon={AiFillLinkedin} iconSize={32} link="https://www.linkedin.com/in/arturpoffo/" />
+        <ContactOption optionName="Instagram" Icon={AiFillInstagram} iconSize={32} link="https://www.instagram.com/artur_poffo/" />
+        <ContactOption optionName="GitHub" Icon={AiFillGithub} iconSize={32} link="https://github.com/Artur-Poffo" />
       </div>
 
     </section>

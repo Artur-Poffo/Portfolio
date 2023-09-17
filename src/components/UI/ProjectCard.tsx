@@ -25,10 +25,15 @@ const projectCard = tv({
 })
 
 interface ProjectCardProps {
+  id: string
   resumed?: boolean
+  imageUrl: string
+  name: string
+  resume: string
+  description: string
 }
 
-export function ProjectCard({ resumed = false }: ProjectCardProps) {
+export function ProjectCard({ resumed = false, imageUrl, name, resume, description, id }: ProjectCardProps) {
   const { base, imageContainer, contentContainer } = projectCard({ resumed: { initial: false, xl: resumed } })
 
   return (
@@ -39,21 +44,21 @@ export function ProjectCard({ resumed = false }: ProjectCardProps) {
       className={base()}
     >
       <div className={imageContainer()} >
-        <Image className="w-full h-full object-cover" src={"https://github.com/Artur-Poffo/Loyal-Sports/raw/main/public/README/Home.png?raw=true"} width={500} height={500} alt="Imagem do projeto" />
+        <Image className="w-full h-full object-cover" src={imageUrl} width={500} height={500} alt="Imagem do projeto" />
       </div>
 
       <div className={contentContainer()} >
         <header className="flex flex-col gap-1" >
-          <h1 className="text-brand-gray-100 text-2xl font-mono font-bold" >Loyal Sports</h1>
-          <span className="text-sm text-brand-gray-400" >Um site para uma pequena empresa de calçados</span>
+          <h1 className="text-brand-gray-100 text-2xl font-mono font-bold" >{name}</h1>
+          <span className="text-sm text-brand-gray-400" >{resume}</span>
         </header>
 
         <div className="max-w-lg flex flex-col gap-1" >
           <strong>Descrição:</strong>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi corporis exercitationem molestias, nam porro quas sint dolorum pariatur facilis illum ipsam, sequi, dolores labore atque unde vitae esse mollitia ea.</p>
+          <p>{description}</p>
         </div>
 
-        <Link href={"/"} >
+        <Link href={`/projects/${id}`} >
           <button className="w-full py-3 bg-brand-blue-100 text-brand-gray-100 font-bold rounded-md transition-all hover:opacity-80" >Saiba Mais</button>
         </Link>
       </div>
