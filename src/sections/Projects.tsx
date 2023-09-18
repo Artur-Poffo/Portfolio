@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic"
 
 const query = gql`
   query {
-    projects(first: 3) {
+    projects(where: { highlighted: true }, first: 5) {
       id,
       projectImage {
         url
@@ -40,7 +40,7 @@ export async function ProjectsSection() {
         <ul className="flex flex-col items-center gap-10" >
           {data.projects.map((project: IProject) => {
             return (
-              <li key={project.id} >
+              <li key={project.id} className="w-full md:w-auto" >
                 <ProjectCard
                   id={project.id}
                   imageUrl={project.projectImage.url}

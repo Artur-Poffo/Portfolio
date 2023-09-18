@@ -10,7 +10,7 @@ export const dynamic = "force-dynamic"
 
 const query = gql`
   query {
-    skills(where: { highlighted: true }, first: 10) {
+    skills(where: { highlighted: true }, first: 11) {
       id,
       name,
       description,
@@ -40,7 +40,7 @@ export async function SkillsSection() {
         <DefaultListItems>
           {data.skills.map((skill) => {
             return (
-              <li key={skill.id} >
+              <li key={skill.id} className="w-full md:w-auto" >
                 <SkillCard
                   name={skill.name}
                   content={skill.description}

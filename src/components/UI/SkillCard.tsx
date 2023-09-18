@@ -9,7 +9,7 @@ interface SkillCardProps {
 
 export function SkillCard({ content, name, imageUrl }: SkillCardProps) {
   return (
-    <DefaultCard className="w-full md:w-[330px] min-h-[200px] lg:min-h-[330px] flex flex-col items-center gap-4 pt-0" >
+    <DefaultCard className="w-full md:w-[330px] min-h-[200px] md:min-h-[330px] flex flex-col items-center gap-4 pt-0" >
       <header className="flex flex-col items-center gap-2 -mt-7" >
         <Image src={imageUrl} width={80} height={80} alt="Imagem da habilidade" />
         <h2 className="text-lg font-bold font-mono text-brand-gray-100" >{name}</h2>

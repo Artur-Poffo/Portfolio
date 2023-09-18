@@ -40,14 +40,15 @@ export default async function Projects() {
           <DefaultListItems>
             {data.projects.map((project: IProject) => {
               return (
-                <ProjectCard
-                  key={project.id}
-                  id={project.id}
-                  imageUrl={project.projectImage.url}
-                  name={project.name}
-                  resume={project.resume}
-                  description={project.description}
-                />
+                <li key={project.id} >
+                  <ProjectCard
+                    id={project.id}
+                    imageUrl={project.projectImage.url}
+                    name={project.name}
+                    resume={project.resume}
+                    description={project.description}
+                  />
+                </li>
               )
             })}
           </DefaultListItems>

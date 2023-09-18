@@ -37,19 +37,20 @@ export default async function Skills() {
 
         <div className="px-4" >
           <DefaultListItems>
-            {data.skills.map((skill: ISkill) => {
+            {data.skills.map((skill) => {
               return (
-                <SkillCard
-                  key={skill.name}
-                  name={skill.name}
-                  content={skill.description}
-                  imageUrl={skill.skillImage.url}
-                />
+                <li key={skill.id} className="w-full md:w-auto" >
+                  <SkillCard
+                    name={skill.name}
+                    content={skill.description}
+                    imageUrl={skill.skillImage.url}
+                  />
+                </li>
               )
             })}
           </DefaultListItems>
         </div>
       </div>
-    </PageWrapper>
+    </PageWrapper >
   )
 }
