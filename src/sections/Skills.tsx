@@ -10,10 +10,7 @@ export const dynamic = "force-dynamic"
 
 const query = gql`
   query {
-    skills(
-      orderBy: createdAt_DESC
-      first: 5
-    ) {
+    skills(where: { highlighted: true }, first: 10) {
       id,
       name,
       description,

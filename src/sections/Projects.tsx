@@ -9,10 +9,7 @@ export const dynamic = "force-dynamic"
 
 const query = gql`
   query {
-    projects(
-      orderBy: createdAt_ASC
-      first: 3
-    ) {
+    projects(first: 3) {
       id,
       projectImage {
         url

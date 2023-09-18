@@ -10,9 +10,7 @@ export const dynamic = "force-dynamic"
 
 const query = gql`
   query {
-    skills(
-      orderBy: createdAt_ASC
-    ) {
+    skills(first: 100) {
       id,
       name,
       description,
