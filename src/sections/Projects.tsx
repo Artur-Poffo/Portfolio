@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic"
 
 const query = gql`
   query {
-    projects(where: { highlighted: true }, first: 5) {
+    projects(where: {highlighted: true}, first: 10) {
       id,
       projectImage {
         url
