@@ -10,7 +10,7 @@ export const dynamic = "force-dynamic"
 
 const query = gql`
   query {
-    skills(where: { highlighted: true }, first: 11) {
+    skills(where: {highlighted: true}, first: 10) {
       id,
       name,
       description,
