@@ -4,8 +4,6 @@ import { SectionTitle } from "@/components/UI/SectionTitle";
 import { IProject } from "@/interfaces/IProject";
 import { hygraph } from "@/lib/graphql-request";
 
-export const dynamic = "force-dynamic"
-
 interface queryResponse {
   projects: IProject[]
 }

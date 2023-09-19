@@ -4,6 +4,8 @@ import { HomeSection } from "@/sections/Home";
 import { ProjectsSection } from "@/sections/Projects";
 import { SkillsSection } from "@/sections/Skills";
 
+export const dynamic = "force-dynamic"
+
 export default function Home() {
   return (
     <PageWrapper>

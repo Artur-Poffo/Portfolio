@@ -45,13 +45,13 @@ export default async function Project({ params: { id } }: ProjectProps) {
       <div className="flex flex-col items-center pb-20" >
         <PageHeader title={project.name} />
 
-        <article className="flex flex-col gap-24 px-4" >
+        <article className="max-w-screen-md flex flex-col items-center gap-24 px-4" >
           <header className="flex flex-col gap-4" >
             <Image className="rounded-xl border border-brand-gray-300" src={project.projectImage.url} width={800} height={800} alt="Imagem do projeto" />
             <span className="text-sm text-brand-gray-400 font-bold" >{project.resume}</span>
           </header>
 
-          <main className="w-full md:max-w-screen-lg mx-auto">
+          <main className="self-start">
             <ReactMarkdown className="prose prose-invert max-w-none break-words prose-h2:text-brand-gray-100 prose-h2:text-3xl prose-img:rounded-md prose-a:underline prose-a:underline-offset-4 prose-a:decoration-brand-blue-200 prose-a:transition-colors prose-a:font-normal hover:prose-a:text-brand-blue-200">
               {project.content}
             </ReactMarkdown>
