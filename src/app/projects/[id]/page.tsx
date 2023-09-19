@@ -1,16 +1,9 @@
 import { PageHeader } from "@/components/UI/PageHeader"
 import { PageWrapper } from "@/components/UI/PageWrapper"
 import { IProject } from "@/interfaces/IProject"
-import { getClient } from "@/lib/apollo"
-import { gql } from "@apollo/client"
+import { hygraph } from "@/lib/graphql-request"
 import Image from "next/image"
 import ReactMarkdown from "react-markdown"
-
-interface ProjectProps {
-  params: {
-    id: string
-  }
-}
 
 export const dynamic = "force-dynamic"
 
@@ -18,26 +11,34 @@ interface queryResponse {
   project: IProject
 }
 
-export default async function Project({ params: { id }, }: ProjectProps) {
-  const query = gql`
-  query GetPRoject($id: ID!) {
-    project(where: { id: $id }) {
-      projectImage {
-        url
-      },
-      name,
-      resume,
-      content
+async function getProject(params: { id: string }) {
+  const { project } = await hygraph.request<queryResponse>(
+    `query GetPRoject($id: ID!) {
+      project(where: { id: $id }) {
+        projectImage {
+          url
+        },
+        name,
+        resume,
+        content
+      }
+    }`,
+    {
+      id: params.id
     }
-  }
-`
+  )
 
-  const { data: { project } } = await getClient().query<queryResponse>({
-    query,
-    variables: {
-      id
-    }
-  });
+  return project
+}
+
+interface ProjectProps {
+  params: {
+    id: string
+  }
+}
+
+export default async function Project({ params: { id } }: ProjectProps) {
+  const project = await getProject({ id })
 
   return (
     <PageWrapper>

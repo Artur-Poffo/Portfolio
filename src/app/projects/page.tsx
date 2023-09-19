@@ -3,33 +3,34 @@ import { PageHeader } from "@/components/UI/PageHeader";
 import { PageWrapper } from "@/components/UI/PageWrapper";
 import { ProjectCard } from "@/components/UI/ProjectCard";
 import { IProject } from "@/interfaces/IProject";
-import { getClient } from "@/lib/apollo";
-import { gql } from "@apollo/client";
+import { hygraph } from "@/lib/graphql-request";
 
 export const dynamic = "force-dynamic"
-
-const query = gql`
-  query {
-    projects(first: 100) {
-      id,
-      projectImage {
-        url
-      },
-      name,
-      resume,
-      description
-    }
-  }
-`
 
 interface queryResponse {
   projects: IProject[]
 }
 
+async function getProjects() {
+  const { projects } = await hygraph.request<queryResponse>(
+    `query {
+      projects(first: 100) {
+        id,
+        projectImage {
+          url
+        },
+        name,
+        resume,
+        description
+      }
+    }`
+  )
+
+  return projects
+}
+
 export default async function Projects() {
-  const { data } = await getClient().query<queryResponse>({
-    query,
-  });
+  const projects = await getProjects()
 
   return (
     <PageWrapper>
@@ -38,7 +39,7 @@ export default async function Projects() {
 
         <div className="px-4" >
           <DefaultListItems>
-            {data.projects.map((project: IProject) => {
+            {projects.map((project: IProject) => {
               return (
                 <li key={project.id} >
                   <ProjectCard

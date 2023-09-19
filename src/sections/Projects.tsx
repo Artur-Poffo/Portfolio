@@ -2,33 +2,34 @@ import { FlashyLink } from "@/components/Navigation/FlashyLink";
 import { ProjectCard } from "@/components/UI/ProjectCard";
 import { SectionTitle } from "@/components/UI/SectionTitle";
 import { IProject } from "@/interfaces/IProject";
-import { getClient } from "@/lib/apollo";
-import { gql } from "@apollo/client";
+import { hygraph } from "@/lib/graphql-request";
 
 export const dynamic = "force-dynamic"
-
-const query = gql`
-  query {
-    projects(where: {highlighted: true}, first: 10) {
-      id,
-      projectImage {
-        url
-      },
-      name,
-      resume,
-      description
-    }
-  }
-`
 
 interface queryResponse {
   projects: IProject[]
 }
 
+async function getProjects() {
+  const { projects } = await hygraph.request<queryResponse>(
+    `query {
+      projects(where: {highlighted: true}, first: 5) {
+        id,
+        projectImage {
+          url
+        },
+        name,
+        resume,
+        description
+      }
+    }`
+  )
+
+  return projects
+}
+
 export async function ProjectsSection() {
-  const { data } = await getClient().query<queryResponse>({
-    query,
-  });
+  const projects = await getProjects()
 
   return (
     <section id="projects" className="px-4" >
@@ -38,7 +39,7 @@ export async function ProjectsSection() {
 
       <div className="flex flex-col items-center gap-20 mt-12" >
         <ul className="flex flex-col items-center gap-10" >
-          {data.projects.map((project: IProject) => {
+          {projects.map((project: IProject) => {
             return (
               <li key={project.id} className="w-full md:w-auto" >
                 <ProjectCard
