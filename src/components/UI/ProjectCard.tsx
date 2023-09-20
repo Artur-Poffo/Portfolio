@@ -9,14 +9,14 @@ const projectCard = tv({
   slots: {
     base: "flex flex-col items-start bg-brand-gray-600 rounded-md border-2 border-transparent",
     imageContainer: "w-full h-1/2",
-    contentContainer: "w-full flex flex-col gap-6 p-6"
+    contentContainer: "max-w-lg h-full flex flex-col gap-6 p-6"
   },
   variants: {
     resumed: {
       true: {
         base: "flex-row",
         imageContainer: "w-1/2 h-full",
-        contentContainer: "w-auto p-10"
+        contentContainer: "p-10"
       },
     },
   },
@@ -53,7 +53,7 @@ export function ProjectCard({ resumed = false, imageUrl, name, resume, descripti
           <span className="text-sm text-brand-gray-400" >{resume}</span>
         </header>
 
-        <div className="max-w-lg flex flex-col gap-1" >
+        <div className="flex flex-col gap-1" >
           <strong>Descrição:</strong>
           <p>{description}</p>
         </div>
