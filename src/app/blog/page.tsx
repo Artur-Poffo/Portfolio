@@ -10,6 +10,8 @@ export const metadata: Metadata = {
   description: 'Blog pessoal criado com o intuito de compartilhar e aprofundar meus conhecimentos',
 }
 
+export const dynamic = "force-dynamic"
+
 export default function Blog() {
   return (
     <PageWrapper>

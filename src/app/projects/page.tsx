@@ -5,7 +5,7 @@ import { ProjectCard } from "@/components/UI/ProjectCard";
 import { IProject } from "@/interfaces/IProject";
 import { hygraph } from "@/lib/graphql-request";
 
-export const dynamic = "force-dynamic"
+export const revalidate = 60 * 60 * 1 // One hour
 
 interface queryResponse {
   projects: IProject[]

@@ -5,7 +5,7 @@ import { SkillCard } from "@/components/UI/SkillCard";
 import { ISkill } from "@/interfaces/ISkill";
 import { hygraph } from "@/lib/graphql-request";
 
-export const dynamic = "force-dynamic"
+export const revalidate = 60 * 60 * 1 // One hour
 
 interface queryResponse {
   skills: ISkill[]

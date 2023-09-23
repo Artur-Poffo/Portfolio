@@ -13,7 +13,7 @@ export function DefaultCard({ children, className }: DefaultCardProps) {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0, transition: { type: "spring", duration: 1 } }}
       whileHover={{ y: -8, borderBottomColor: "#0369a1", transition: { type: "spring", duration: 0.3 } }}
-      className={"border-b-4 border-transparent bg-brand-gray-600 p-5 " + className}
+      className={"border-b-4 border-transparent bg-brand-gray-600 " + className}
     >
       {children}
     </motion.div>

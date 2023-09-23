@@ -5,7 +5,7 @@ import { hygraph } from "@/lib/graphql-request"
 import Image from "next/image"
 import ReactMarkdown from "react-markdown"
 
-export const dynamic = "force-dynamic"
+export const revalidate = 60 * 60 * 1 // One hour
 
 interface queryResponse {
   project: IProject
