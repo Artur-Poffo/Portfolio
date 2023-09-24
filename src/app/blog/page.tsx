@@ -18,10 +18,10 @@ interface queryResponse {
   posts: IPost[]
 }
 
-async function getPosts() {
+async function getPosts(params: { query: string }) {
   const { posts } = await hygraph.request<queryResponse>(
-    `query {
-      posts(first: 100) {
+    `query getPosts($query: String!) {
+      posts(first: 100, where: {title_contains: $query}) {
         id,
         title,
         slug,
@@ -31,14 +31,23 @@ async function getPosts() {
           url
         }
       }
-    }`
+    }`,
+    {
+      query: params.query || ""
+    }
   )
 
   return posts
 }
 
-export default async function Blog() {
-  const posts = await getPosts()
+interface BlogProps {
+  searchParams: {
+    query: string
+  }
+}
+
+export default async function Blog({ searchParams: { query } }: BlogProps) {
+  const posts = await getPosts({ query })
 
   return (
     <PageWrapper>

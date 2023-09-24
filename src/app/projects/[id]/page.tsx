@@ -42,10 +42,10 @@ export default async function Project({ params: { id } }: ProjectProps) {
 
   return (
     <PageWrapper>
-      <div className="flex flex-col items-center pb-20" >
+      <div className="flex flex-col items-center pb-10" >
         <PageHeader title={project.name} />
 
-        <article className="max-w-screen-md flex flex-col items-center gap-24 px-4" >
+        <article className="max-w-screen-md flex flex-col items-center gap-10 px-4" >
           <header className="flex flex-col gap-4" >
             <Image className="max-h-[500px] rounded-xl border border-brand-gray-300" src={project.projectImage.url} width={800} height={800} alt="Imagem do projeto" />
             <span className="text-sm text-brand-gray-400 font-bold" >{project.resume}</span>

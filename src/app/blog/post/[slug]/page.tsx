@@ -40,13 +40,13 @@ export default async function Post({ params: { slug } }: PostProps) {
 
   return (
     <PageWrapper>
-      <div className="flex flex-col items-center py-20" >
-        <article className="max-w-screen-md flex flex-col items-center gap-24 px-4" >
+      <div className="flex flex-col items-center pt-20 pb-10" >
+        <article className="max-w-screen-md flex flex-col items-center gap-10 px-4" >
           <header className="flex flex-col gap-8" >
             <Image className="max-h-[450px] object-cover rounded-xl border border-brand-gray-300" src={post.postImage.url} width={800} height={800} alt="Imagem do projeto" />
 
             <div>
-              <h1 className="text-4xl md:text-4xl font-mono font-bold text-brand-blue-100" >{post.title}</h1>
+              <h1 className="text-4xl md:text-4xl font-mono font-bold text-brand-blue-100 mb-2" >{post.title}</h1>
               <span className="text-sm text-brand-gray-400" >{dayjs(post.createdAt).format("DD/MM/YYYY")}</span>
             </div>
 
