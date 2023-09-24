@@ -21,7 +21,7 @@ interface queryResponse {
 async function getPosts(params: { query: string }) {
   const { posts } = await hygraph.request<queryResponse>(
     `query getPosts($query: String!) {
-      posts(first: 100, where: {title_contains: $query}) {
+      posts(first: 100, where: {title_contains: $query}, orderBy: createdAt_DESC) {
         id,
         title,
         slug,
