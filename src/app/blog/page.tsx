@@ -1,6 +1,8 @@
 import { DefaultListItems } from "@/components/UI/DefaultListItems";
 import { PageHeader } from "@/components/UI/PageHeader";
 import { PageWrapper } from "@/components/UI/PageWrapper";
+import { IPost } from "@/interfaces/IPost";
+import { hygraph } from "@/lib/graphql-request";
 import { Metadata } from "next";
 import { PostCard } from "./components/PostCard";
 import { SearchBar } from "./components/SearchBar";
@@ -12,7 +14,32 @@ export const metadata: Metadata = {
 
 export const dynamic = "force-dynamic"
 
-export default function Blog() {
+interface queryResponse {
+  posts: IPost[]
+}
+
+async function getPosts() {
+  const { posts } = await hygraph.request<queryResponse>(
+    `query {
+      posts(first: 100) {
+        id,
+        title,
+        slug,
+        description,
+        createdAt
+        postImage {
+          url
+        }
+      }
+    }`
+  )
+
+  return posts
+}
+
+export default async function Blog() {
+  const posts = await getPosts()
+
   return (
     <PageWrapper>
       <div className="flex flex-col items-center gap-4" >
@@ -24,30 +51,18 @@ export default function Blog() {
           </header>
 
           <DefaultListItems>
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
+            {posts.map(post => {
+              return (
+                <PostCard
+                  key={post.id}
+                  createdAt={post.createdAt}
+                  description={post.description}
+                  imageUrl={post.postImage.url}
+                  title={post.title}
+                  slug={post.slug}
+                />
+              )
+            })}
           </DefaultListItems>
         </div>
       </div>

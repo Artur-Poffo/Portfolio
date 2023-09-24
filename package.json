@@ -13,6 +13,7 @@
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
+    "dayjs": "^1.11.10",
     "encoding": "^0.1.13",
     "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
@@ -25,6 +26,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.11.0",
     "react-markdown": "^8.0.7",
+    "relativeTime": "link:dayjs/plugin/relativeTime",
     "tailwind-variants": "^0.1.14",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2"
