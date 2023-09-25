@@ -19,7 +19,7 @@ export function MobileMenu({ links, specialLinks }: NavigationProps) {
       </div>
 
       <div
-        className={`fixed top-0 left-0 w-screen h-screen bg-brand-gray-900 z-40 ${isOpenMenu ? 'ml-0' : '-ml-[100vw]'
+        className={`fixed top-0 left-0 w-screen h-screen backdrop-blur-xl z-40 ${isOpenMenu ? 'ml-0' : '-ml-[100vw]'
           } transition-all flex items-center justify-center gap-10`}
       >
         <nav className="flex flex-col gap-4">

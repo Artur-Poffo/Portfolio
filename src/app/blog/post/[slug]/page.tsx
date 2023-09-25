@@ -46,7 +46,7 @@ export default async function Post({ params: { slug } }: PostProps) {
             <Image className="max-h-[450px] object-cover rounded-xl border border-brand-gray-300" src={post.postImage.url} width={800} height={800} alt="Imagem do projeto" />
 
             <div>
-              <h1 className="text-4xl md:text-4xl font-mono font-bold text-brand-blue-100 mb-2" >{post.title}</h1>
+              <h1 className="text-3xl md:text-4xl font-mono font-bold text-brand-blue-100 mb-2" >{post.title}</h1>
               <span className="text-sm text-brand-gray-400" >{dayjs(post.createdAt).format("DD/MM/YYYY")}</span>
             </div>
 
