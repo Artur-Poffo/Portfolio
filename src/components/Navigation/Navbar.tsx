@@ -23,11 +23,15 @@ export function Navbar({ links, specialLinks }: NavigationProps) {
           <>
             <span className="font-bold" >|</span>
 
-            {specialLinks.map(link => {
-              return (
-                <NavLink key={link.name} name={link.name} to={link.to} useNextLink={link.useNextLink} />
-              )
-            })}
+            <ul>
+              {specialLinks.map(link => {
+                return (
+                  <li key={link.name}>
+                    <NavLink name={link.name} to={link.to} useNextLink={link.useNextLink} />
+                  </li>
+                )
+              })}
+            </ul>
           </>
         )}
       </nav>

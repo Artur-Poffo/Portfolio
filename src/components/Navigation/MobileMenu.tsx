@@ -26,12 +26,13 @@ export function MobileMenu({ links, specialLinks }: NavigationProps) {
           <ul className="flex flex-col gap-2">
             {links.map(link => {
               return (
-                <NavLink
-                  key={link.name}
-                  onClick={() => setIsOpenMenu(false)}
-                  name={link.name}
-                  to={link.to}
-                />
+                <li key={link.name}>
+                  <NavLink
+                    onClick={() => setIsOpenMenu(false)}
+                    name={link.name}
+                    to={link.to}
+                  />
+                </li>
               )
             })}
           </ul>
@@ -44,7 +45,9 @@ export function MobileMenu({ links, specialLinks }: NavigationProps) {
               <ul>
                 {specialLinks.map(link => {
                   return (
-                    <NavLink key={link.name} onClick={() => setIsOpenMenu(false)} name={link.name} to={link.to} useNextLink={link.useNextLink} />
+                    <li key={link.name} >
+                      <NavLink onClick={() => setIsOpenMenu(false)} name={link.name} to={link.to} useNextLink={link.useNextLink} />
+                    </li>
                   )
                 })}
               </ul>
