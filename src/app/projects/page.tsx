@@ -14,7 +14,7 @@ interface queryResponse {
 async function getProjects() {
   const { projects } = await hygraph.request<queryResponse>(
     `query {
-      projects(first: 100) {
+      projects(last: 100) {
         id,
         projectImage {
           url
