@@ -14,7 +14,7 @@ interface queryResponse {
 async function getSkills() {
   const { skills } = await hygraph.request<queryResponse>(
     `query {
-      skills(first: 100) {
+      skills(last: 100) {
         id,
         name,
         description,
