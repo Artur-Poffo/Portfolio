@@ -18,10 +18,10 @@ export function AboutSection() {
         <div className="max-w-lg flex flex-col items-center lg:items-start gap-5" >
           <ul className="flex flex-col text-center lg:text-left gap-4 px-2" >
             <li><AnimatedSpan delay={0.1}><span className="text-brand-blue-200 font-bold" >-</span> Sempre me dedico para aprender coisas novas;</AnimatedSpan></li>
-            <li><AnimatedSpan delay={0.2}><span className="text-brand-blue-200 font-bold" >-</span> Tenho 16 anos mas já muito interessado na área;</AnimatedSpan></li>
+            <li><AnimatedSpan delay={0.2}><span className="text-brand-blue-200 font-bold" >-</span> Tenho 17 anos mas já muito interessado na área;</AnimatedSpan></li>
             <li><AnimatedSpan delay={0.3}><span className="text-brand-blue-200 font-bold" >-</span> Estudei por um bom tempo sendo 100% autodidata;</AnimatedSpan></li>
-            <li><AnimatedSpan delay={0.4}><span className="text-brand-blue-200 font-bold" >-</span> Estou no segundo ano do ensino médio no período noturno;</AnimatedSpan></li>
-            <li><AnimatedSpan delay={0.5}><span className="text-brand-blue-200 font-bold" >-</span> Já concluí o curso do programadorBr e estou fazendo o Ignite da Rocketseat e o Entra21 simultaneamente.</AnimatedSpan></li>
+            <li><AnimatedSpan delay={0.4}><span className="text-brand-blue-200 font-bold" >-</span> Estou no terceiro ano do ensino médio no período noturno;</AnimatedSpan></li>
+            <li><AnimatedSpan delay={0.5}><span className="text-brand-blue-200 font-bold" >-</span> Já concluí o curso do ProgramadorBr, Ignite da Rocketseat e o programa de formação do Entra21.</AnimatedSpan></li>
           </ul>
 
           <SocialMediaIcons />
