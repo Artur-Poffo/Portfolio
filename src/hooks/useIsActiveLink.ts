@@ -1,28 +1,25 @@
 import { usePathname, useSearchParams } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
-export function useIsActiveLink(path: string, params?: Record<string, string>) {
+export function useIsActiveLink(path: string) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const hash = typeof window !== 'undefined' ? window.location.hash : '';
+  const [isActive, setIsActive] = useState(false);
 
-  if (path.includes('#')) {
-    const [pathWithoutHash, pathHash] = path.split('#');
-    return (pathname === pathWithoutHash || pathname === '/') && hash === `#${pathHash}`;
-  }
+  useEffect(() => {
+    const checkIsActive = () => {
+      const hash = typeof window !== 'undefined' ? window.location.hash : '';
 
-  if (pathname !== path) {
-    return false;
-  }
+      if (path.includes('#')) {
+        const [pathWithoutHash, pathHash] = path.split('#');
+        return (pathname === pathWithoutHash || pathname === '/') && hash === `#${pathHash}`;
+      } else {
+        return pathname === path || pathname.startsWith(`${path}/`);
+      }
+    };
 
-  if (!params) {
-    return true;
-  }
+    setIsActive(checkIsActive());
+  }, [pathname, searchParams, path]);
 
-  for (const [key, value] of Object.entries(params)) {
-    if (searchParams.get(key) !== value) {
-      return false;
-    }
-  }
-
-  return true;
+  return isActive;
 }

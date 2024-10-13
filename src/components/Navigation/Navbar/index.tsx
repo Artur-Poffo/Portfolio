@@ -3,10 +3,10 @@ import { Navlink } from "../Navlink";
 
 export default function Navbar() {
   return (
-    <NavigationMenu className="fixed top-4 left-1/2 -translate-x-1/2 z-[999] p-2 bg-slate-400 backdrop-blur-3xl bg-opacity-20 rounded-full min-w-60">
+    <NavigationMenu className="fixed top-4 left-1/2 -translate-x-1/2 z-[999] p-2 bg-slate-400 backdrop-blur-md bg-opacity-20 rounded-full min-w-60">
       <NavigationMenuList className="flex">
         <NavigationMenuItem>
-          <Navlink path="/">Home</Navlink>
+          <Navlink path="/#home">Home</Navlink>
         </NavigationMenuItem>
 
         <NavigationMenuItem>

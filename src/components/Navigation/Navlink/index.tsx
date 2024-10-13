@@ -17,8 +17,12 @@ export function Navlink({
   const isActive = useIsActiveLink(path);
 
   return (
-    <Link href={path} legacyBehavior passHref>
-      <NavigationMenuLink className={`${isActive ? 'bg-slate-100 bg-opacity-10' : 'bg-transparent'} text-slate-100 text-sm px-4 py-1 rounded-full transition-all hover:bg-slate-100 hover:bg-opacity-10`}>
+    <Link href={path} passHref legacyBehavior>
+      <NavigationMenuLink
+        className={`${isActive ? 'bg-slate-100 bg-opacity-10' : 'bg-transparent'
+          } text-slate-100 text-sm px-4 py-1 rounded-full transition-all hover:bg-slate-100 hover:bg-opacity-10`}
+        active={isActive}
+      >
         {children}
       </NavigationMenuLink>
     </Link>
