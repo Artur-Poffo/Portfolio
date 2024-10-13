@@ -17,7 +17,7 @@ export default function RootLayout({
       <body>
         <Navbar />
 
-        <main className="w-full min-h-screen bg-slate-900 text-slate-300 antialiased">
+        <main className="w-full min-h-screen antialiased px-4">
           {children}
         </main>
       </body>

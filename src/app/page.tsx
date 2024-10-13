@@ -1,7 +1,9 @@
-export default function Home() {
+import HomeSection from "@/sections/Home";
+
+export default function Main() {
   return (
-    <div>
-      <h1>Olá, eu sou o Artur Poffo</h1>
-    </div>
+    <>
+      <HomeSection />
+    </>
   );
 }

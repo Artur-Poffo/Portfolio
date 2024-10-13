@@ -4,6 +4,10 @@
 
 @layer base {
   :root {
-    --radius: 0.5rem
+    --radius: 0.5rem;
+  }
+
+  body {
+    @apply bg-gradient-to-bl from-slate-950 via-slate-900 to-slate-800 text-slate-300;
   }
 }
