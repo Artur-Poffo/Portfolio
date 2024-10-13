@@ -7,7 +7,37 @@
     --radius: 0.5rem;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-emerald-400 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-emerald-500;
+  }
+
+  ::selection {
+    @apply bg-emerald-400 text-slate-900;
+  }
+
   body {
     @apply bg-gradient-to-bl from-slate-950 via-slate-900 to-slate-800 text-slate-300;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply py-10 max-w-screen-xl mx-auto flex flex-col gap-10;
   }
 }

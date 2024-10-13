@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/Navigation/Navbar";
+import { Navbar } from "@/components/Navigation/Navbar";
 
 export const metadata: Metadata = {
   title: "Artur Poffo | Portfólio",

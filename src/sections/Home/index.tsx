@@ -1,4 +1,4 @@
-export default function HomeSection() {
+export function HomeSection() {
   return (
     <section id="home">
       <div className="w-full h-screen flex items-center justify-center">
