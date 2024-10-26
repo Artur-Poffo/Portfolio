@@ -1,3 +1,4 @@
+import { AnimatedList } from "@/components/UI/AnimatedList";
 import { SectionTitle } from "@/components/UI/SectionTitle";
 import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { Image } from "next-sanity/image";
@@ -19,44 +20,22 @@ export function AboutSection() {
         </div>
 
         <div className="flex flex-col gap-4" >
-          <ul className="flex flex-col gap-2">
-            <li>
-              <p className="font-bold" >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-              </p>
-            </li>
-
-            <li>
-              <p className="font-bold" >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-              </p>
-            </li>
-
-            <li>
-              <p className="font-bold" >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-              </p>
-            </li>
-
-            <li>
-              <p className="font-bold" >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-              </p>
-            </li>
-          </ul>
+          <AnimatedList
+            items={["Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."]}
+          />
 
           <div className="flex gap-2">
-            <Link className="flex items-center gap-1 px-4 py-1 text-center rounded-md bg-slate-800 text-slate-200" href="/" >
+            <Link className="flex items-center gap-1 px-4 py-1 text-center rounded-md bg-slate-800 text-slate-200 transition-colors hover:bg-slate-700" href="/" >
               <LinkedInLogoIcon className="w-5 h-6" />
               LinkedIn
             </Link>
 
-            <Link className="flex items-center gap-1 px-4 py-1 text-center rounded-md bg-slate-800 text-slate-200" href="/" >
+            <Link className="flex items-center gap-1 px-4 py-1 text-center rounded-md bg-slate-800 text-slate-200 transition-colors hover:bg-slate-700" href="/" >
               <InstagramLogoIcon className="w-5 h-6" />
               Instagram
             </Link>
 
-            <Link className="flex items-center gap-1 px-4 py-1 text-center rounded-md bg-slate-800 text-slate-200" href="/" >
+            <Link className="flex items-center gap-1 px-4 py-1 text-center rounded-md bg-slate-800 text-slate-200 transition-colors hover:bg-slate-700" href="/" >
               <GitHubLogoIcon className="w-5 h-6" />
               GitHub
             </Link>
