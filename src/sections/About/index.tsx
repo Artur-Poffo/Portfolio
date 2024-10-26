@@ -21,7 +21,12 @@ export function AboutSection() {
 
         <div className="flex flex-col gap-4" >
           <AnimatedList
-            items={["Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."]}
+            items={[
+              <span key={1} className="font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</span>,
+              <span key={2} className="font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</span>,
+              <span key={3} className="font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</span>,
+              <span key={4} className="font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</span>
+            ]}
           />
 
           <div className="flex gap-2">
