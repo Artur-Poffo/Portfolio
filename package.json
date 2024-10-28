@@ -24,6 +24,7 @@
     "sanity": "3",
     "styled-components": "6",
     "tailwind-merge": "^2.5.3",
+    "tailwind-variants": "^0.2.1",
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {

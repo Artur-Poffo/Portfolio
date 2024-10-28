@@ -1,8 +1,8 @@
 import { AnimatedList } from "@/components/UI/AnimatedList";
 import { SectionTitle } from "@/components/UI/SectionTitle";
 import { SkillCard } from "@/components/UI/SkillCard";
+import { TextLink } from "@/components/UI/TextLink";
 import { ArrowUpIcon } from "@radix-ui/react-icons";
-import Link from "next/link";
 
 const skills = [
   { name: "HTML", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.", icon: <ArrowUpIcon /> },
@@ -17,7 +17,7 @@ export function SkillsSection() {
     <section id="skills" className="section-container">
       <SectionTitle text="Habilidades" />
 
-      <div className="flex flex-col items-center gap-20" >
+      <div className="flex flex-col items-center gap-10" >
         <AnimatedList
           items={skills.map((skill, index) => (
             <SkillCard
@@ -33,9 +33,7 @@ export function SkillsSection() {
           animationOrientation="vertical"
         />
 
-        <Link href="/skills" className="text-emerald-400 underline underline-offset-4 transition-opacity hover:opacity-70" >
-          Veja mais
-        </Link>
+        <TextLink text="Ver mais" href="/skills" />
       </div>
     </section>
   )

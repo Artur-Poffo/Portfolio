@@ -18,13 +18,6 @@ export const projectType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'content',
-      title: 'Content',
-      type: 'array',
-      of: [{ type: 'block' }],
-      validation: (rule) => rule.required(),
-    }),
-    defineField({
       name: 'image',
       title: 'Image',
       type: 'image',

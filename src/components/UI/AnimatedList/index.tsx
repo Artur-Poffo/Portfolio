@@ -24,7 +24,7 @@ export function AnimatedList({ items, className, withDelay = true, withListStyle
   }
 
   return (
-    <ul className={`${className ? className : 'flex flex-col gap-2'}`} >
+    <ul className={`${className ? className : 'w-full flex flex-col gap-2'}`} >
       {items.map((item, index) => (
         <motion.li
           key={index}
