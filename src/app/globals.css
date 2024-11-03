@@ -16,23 +16,19 @@
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-slate-900;
+    @apply bg-blue-900;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-emerald-400 rounded-full;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-emerald-500;
+    @apply bg-cyan-500 rounded-full;
   }
 
   ::selection {
-    @apply bg-emerald-400 text-slate-900;
+    @apply bg-cyan-500 text-blue-900;
   }
 
   body {
-    @apply bg-gradient-to-bl from-slate-950 via-slate-900 to-slate-800 text-slate-300;
+    @apply bg-gradient-to-bl from-blue-900 via-blue-800 to-blue-800 text-blue-100;
   }
 }
 

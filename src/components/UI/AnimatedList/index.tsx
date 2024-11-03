@@ -32,7 +32,7 @@ export function AnimatedList({ items, className, withDelay = true, withListStyle
           whileInView={variants[animationOrientation].inView}
           transition={{ duration, delay: withDelay ? index * 0.2 : 0 }}
         >
-          {withListStyle && <span className="text-emerald-400 mr-2" >-</span>}
+          {withListStyle && <span className="text-cyan-500 mr-2" >-</span>}
           {item}
         </motion.li>
       ))}

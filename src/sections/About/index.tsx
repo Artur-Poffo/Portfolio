@@ -10,7 +10,7 @@ export function AboutSection() {
       <SectionTitle text="Sobre" />
 
       <div className="flex justify-center gap-4">
-        <div className="rounded-md border-4 border-emerald-400 p-1">
+        <div className="rounded-md border-4 border-cyan-500 p-1">
           <Image
             src="https://github.com/Artur-Poffo.png"
             alt="Foto de perfil"
@@ -22,25 +22,25 @@ export function AboutSection() {
         <div className="flex flex-col gap-4" >
           <AnimatedList
             items={[
-              <span key={1} className="font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</span>,
-              <span key={2} className="font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</span>,
-              <span key={3} className="font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</span>,
-              <span key={4} className="font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</span>
+              <span key={1} className="font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</span>,
+              <span key={2} className="font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</span>,
+              <span key={3} className="font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</span>,
+              <span key={4} className="font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</span>
             ]}
           />
 
           <div className="flex gap-2">
-            <Link className="flex items-center gap-1 px-4 py-1 text-center rounded-md bg-slate-800 text-slate-200 transition-colors hover:bg-slate-700" href="/" >
+            <Link className="flex items-center gap-1 px-4 py-1 text-center rounded-md bg-slate-800 text-blue-100 transition-colors hover:bg-slate-700" href="/" >
               <LinkedInLogoIcon className="w-5 h-6" />
               LinkedIn
             </Link>
 
-            <Link className="flex items-center gap-1 px-4 py-1 text-center rounded-md bg-slate-800 text-slate-200 transition-colors hover:bg-slate-700" href="/" >
+            <Link className="flex items-center gap-1 px-4 py-1 text-center rounded-md bg-slate-800 text-blue-100 transition-colors hover:bg-slate-700" href="/" >
               <InstagramLogoIcon className="w-5 h-6" />
               Instagram
             </Link>
 
-            <Link className="flex items-center gap-1 px-4 py-1 text-center rounded-md bg-slate-800 text-slate-200 transition-colors hover:bg-slate-700" href="/" >
+            <Link className="flex items-center gap-1 px-4 py-1 text-center rounded-md bg-slate-800 text-blue-100 transition-colors hover:bg-slate-700" href="/" >
               <GitHubLogoIcon className="w-5 h-6" />
               GitHub
             </Link>

@@ -16,16 +16,16 @@ export function ProjectCard({ title, description, image, links, reverse }: Proje
     <article className={`w-full h-[400px] bg-slate-800 rounded-md flex ${reverse ? "flex-row-reverse" : ""} gap-4 p-4`}>
       <main className="w-1/2 h-full flex flex-col justify-between">
         <div>
-          <h2 className="text-2xl font-bold font-mono text-emerald-400">{title}</h2>
-          <p className="text-sm text-slate-400">{description}</p>
+          <h2 className="text-2xl font-bold font-mono text-cyan-500">{title}</h2>
+          <p className="text-sm text-gray-400">{description}</p>
         </div>
 
-        <div className="w-full rounded-md bg-emerald-400 px-4 py-1">
+        <div className="w-full rounded-md bg-cyan-500 bg-opacity-80 px-4 py-1">
           <ul className="flex">
             {links.map((link, index) => (
-              <li key={link.label} className="text-slate-100 rounded-md font-bold">
+              <li key={link.label} className="text-blue-100 rounded-md font-semibold">
                 <a href={link.url} target="_blank">{link.label}</a>
-                {index < links.length - 1 && <span className="text-slate-100 mx-2">|</span>}
+                {index < links.length - 1 && <span className="text-blue-100 mx-2">|</span>}
               </li>
             ))}
           </ul>

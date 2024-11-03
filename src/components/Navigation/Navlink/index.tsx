@@ -19,8 +19,8 @@ export function Navlink({
   return (
     <Link href={path} passHref legacyBehavior>
       <NavigationMenuLink
-        className={`${isActive ? 'bg-slate-100 bg-opacity-10' : 'bg-transparent'
-          } text-slate-100 text-sm px-4 py-1 rounded-full transition-all hover:bg-slate-100 hover:bg-opacity-10`}
+        className={`${isActive ? 'bg-blue-100 bg-opacity-10 text-white' : 'bg-transparent text-blue-100'
+          } px-4 py-1 rounded-full transition-all hover:bg-blue-100 hover:bg-opacity-10`}
         active={isActive}
       >
         {children}
