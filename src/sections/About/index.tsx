@@ -1,49 +1,34 @@
 import { AnimatedList } from "@/components/UI/AnimatedList";
 import { SectionTitle } from "@/components/UI/SectionTitle";
-import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-import { Image } from "next-sanity/image";
-import Link from "next/link";
+import Image from "next/image";
 
 export function AboutSection() {
   return (
-    <section id="about" className="section-container">
-      <SectionTitle text="Sobre" />
-
-      <div className="flex justify-center gap-4">
-        <div className="rounded-md border-4 border-cyan-500 p-1">
+    <section id="about" className="w-full h-screen">
+      <div className="w-full h-full flex items-center justify-center">
+        <div className="w-1/2 h-full">
           <Image
-            src="https://github.com/Artur-Poffo.png"
-            alt="Foto de perfil"
-            width={300}
-            height={300}
+            src={"/about-image.jpg"}
+            width={800}
+            height={800}
+            alt="about image"
+            className="w-full h-full object-cover"
           />
         </div>
 
-        <div className="flex flex-col gap-4" >
-          <AnimatedList
-            items={[
-              <span key={1} className="font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</span>,
-              <span key={2} className="font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</span>,
-              <span key={3} className="font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</span>,
-              <span key={4} className="font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</span>
-            ]}
-          />
+        <div className="w-1/2 h-full flex flex-col items-start justify-center gap-4 pl-20">
+          <div className="max-w-2xl flex flex-col gap-4" >
+            <SectionTitle label="Sobre" title="Artur Poffo" />
 
-          <div className="flex gap-2">
-            <Link className="flex items-center gap-1 px-4 py-1 text-center rounded-md bg-slate-800 text-blue-100 transition-colors hover:bg-slate-700" href="/" >
-              <LinkedInLogoIcon className="w-5 h-6" />
-              LinkedIn
-            </Link>
-
-            <Link className="flex items-center gap-1 px-4 py-1 text-center rounded-md bg-slate-800 text-blue-100 transition-colors hover:bg-slate-700" href="/" >
-              <InstagramLogoIcon className="w-5 h-6" />
-              Instagram
-            </Link>
-
-            <Link className="flex items-center gap-1 px-4 py-1 text-center rounded-md bg-slate-800 text-blue-100 transition-colors hover:bg-slate-700" href="/" >
-              <GitHubLogoIcon className="w-5 h-6" />
-              GitHub
-            </Link>
+            <AnimatedList
+              items={[
+                <span key={1} className="text-neutrals-300/90 font-mono">Sempre me dedico para aprender coisas novas</span>,
+                <span key={2} className="text-neutrals-300/90 font-mono">Tenho 17 anos mas já muito interessado na área</span>,
+                <span key={3} className="text-neutrals-300/90 font-mono">Estudei por um bom tempo sendo 100% autodidata</span>,
+                <span key={4} className="text-neutrals-300/90 font-mono">Estou no terceiro ano do ensino médio no período noturno</span>,
+                <span key={5} className="text-neutrals-300/90 font-mono">Já concluí o curso do ProgramadorBr, Ignite da Rocketseat e o programa de formação do Entra21</span>
+              ]}
+            />
           </div>
         </div>
       </div>

@@ -24,15 +24,14 @@ export function AnimatedList({ items, className, withDelay = true, withListStyle
   }
 
   return (
-    <ul className={`${className ? className : 'w-full flex flex-col gap-2'}`} >
+    <ul className={`${className ? className : 'w-full flex flex-col gap-2'} ${withListStyle ? 'list-disc list-inside' : ''}`} >
       {items.map((item, index) => (
         <motion.li
           key={index}
           initial={variants[animationOrientation].initial}
           whileInView={variants[animationOrientation].inView}
-          transition={{ duration, delay: withDelay ? index * 0.2 : 0 }}
+          transition={{ duration, delay: withDelay ? index * 0.1 : 0 }}
         >
-          {withListStyle && <span className="text-cyan-500 mr-2" >-</span>}
           {item}
         </motion.li>
       ))}

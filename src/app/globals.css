@@ -27,6 +27,10 @@
     @apply bg-primary text-neutrals-50;
   }
 
+  li::marker {
+    @apply text-primary;
+  }
+
   body {
     @apply bg-neutrals-900 text-neutrals-50;
   }
