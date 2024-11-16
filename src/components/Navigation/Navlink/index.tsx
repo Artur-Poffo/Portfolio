@@ -1,7 +1,4 @@
-'use client';
-
 import { NavigationMenuLink } from '@/components/UI/shadcn/navigation-menu';
-import { useIsActiveLink } from '@/hooks/useIsActiveLink';
 import Link from 'next/link';
 import { ReactNode } from 'react';
 
@@ -14,16 +11,11 @@ export function Navlink({
   children,
   path
 }: NavLinkProps) {
-  const isActive = useIsActiveLink(path);
-
   return (
     <Link href={path} passHref legacyBehavior>
-      <NavigationMenuLink
-        className={`${isActive ? 'bg-blue-100 bg-opacity-10 text-white' : 'bg-transparent text-blue-100'
-          } px-4 py-1 rounded-full transition-all hover:bg-blue-100 hover:bg-opacity-10`}
-        active={isActive}
-      >
+      <NavigationMenuLink className="relative nav-link">
         {children}
+        <div className="transition-all absolute w-0 h-px -bottom-1 left-0 bg-gradient-to-r from-transparent via-neutrals-50 to-transparent nav-link-underline" />
       </NavigationMenuLink>
     </Link>
   );

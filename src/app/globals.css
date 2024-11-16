@@ -3,37 +3,43 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --radius: 0.5rem;
-  }
-
   html {
     scroll-behavior: smooth;
   }
 
   ::-webkit-scrollbar {
-    @apply w-2;
-  }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-blue-900;
+    @apply w-1.5;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-cyan-500 rounded-full;
+    @apply rounded-full bg-neutrals-50/15;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-inherit;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-neutrals-50/20;
   }
 
   ::selection {
-    @apply bg-cyan-500 text-blue-900;
+    @apply bg-primary text-neutrals-50;
   }
 
   body {
-    @apply bg-gradient-to-bl from-blue-900 via-blue-800 to-blue-800 text-blue-100;
+    @apply bg-neutrals-900 text-neutrals-50;
   }
 }
 
 @layer components {
   .section-container {
-    @apply py-10 max-w-screen-xl mx-auto flex flex-col gap-10;
+    @apply py-10 max-w-screen-xl mx-auto flex flex-col gap-10 px-4;
+  }
+}
+
+@layer utilities {
+  .nav-link:hover .nav-link-underline {
+    width: 100%;
   }
 }
