@@ -1,7 +1,8 @@
+import { NavButton } from "@/components/Navigation/NavButton";
 import { AnimatedList } from "@/components/UI/AnimatedList";
 import { ProjectCard } from "@/components/UI/ProjectCard";
 import { SectionTitle } from "@/components/UI/SectionTitle";
-import { TextLink } from "@/components/UI/TextLink";
+import { MoveRight } from "lucide-react";
 
 const projects = [
   {
@@ -54,7 +55,7 @@ const projects = [
 export function ProjectsSection() {
   return (
     <section id="projects" className="section-container">
-      <SectionTitle text="Projetos" />
+      <SectionTitle label="Projetos" />
 
       <div className="w-full flex flex-col items-center gap-10">
         <AnimatedList
@@ -75,7 +76,7 @@ export function ProjectsSection() {
           className="w-full flex flex-col gap-8"
         />
 
-        <TextLink text="Ver mais" href="/projects" />
+        <NavButton text="Ver mais" href="/projects" icon={MoveRight} />
       </div>
     </section>
   );

@@ -17,6 +17,8 @@ const buttonVariants = cva(
           "border border-neutrals-50 bg-transparent hover:bg-neutrals-50 hover:text-primary",
         destructive:
           "bg-red-500 text-neutrals-50 border border-transparent",
+        ghost:
+          "bg-transparent text-neutrals-50",
       },
       size: {
         default: "px-4 py-2",

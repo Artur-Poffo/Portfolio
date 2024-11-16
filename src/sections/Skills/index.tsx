@@ -1,8 +1,9 @@
+import { NavButton } from "@/components/Navigation/NavButton";
 import { AnimatedList } from "@/components/UI/AnimatedList";
 import { SectionTitle } from "@/components/UI/SectionTitle";
 import { SkillCard } from "@/components/UI/SkillCard";
-import { TextLink } from "@/components/UI/TextLink";
 import { ArrowUpIcon } from "@radix-ui/react-icons";
+import { MoveRight } from "lucide-react";
 
 const skills = [
   { name: "HTML", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.", icon: <ArrowUpIcon /> },
@@ -15,7 +16,9 @@ const skills = [
 export function SkillsSection() {
   return (
     <section id="skills" className="section-container">
-      <SectionTitle text="Habilidades" />
+      <header className="w-full flex justify-center">
+        <SectionTitle label="Habilidades" title="Minhas Habilidades" center />
+      </header>
 
       <div className="flex flex-col items-center gap-10" >
         <AnimatedList
@@ -33,7 +36,7 @@ export function SkillsSection() {
           animationOrientation="vertical"
         />
 
-        <TextLink text="Ver mais" href="/skills" />
+        <NavButton text="Ver mais" href="/skills" icon={MoveRight} />
       </div>
     </section>
   )
