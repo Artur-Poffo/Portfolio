@@ -1,3 +1,5 @@
+import { DefaultCard } from "../DefaultCard"
+
 interface SkillCardProps {
   name: string
   description: string
@@ -6,8 +8,9 @@ interface SkillCardProps {
 
 export function SkillCard({ name, description, icon }: SkillCardProps) {
   return (
-    <article
-      className="w-[300px] min-h-[250px] bg-neutrals-800/60 backdrop-blur-xl border border-neutrals-700 rounded-md flex flex-col items-center gap-2 border-transparent transition-all hover:-translate-y-1 hover:border-primary/60"
+    <DefaultCard
+      className="w-[300px] min-h-[250px] flex flex-col items-center gap-2"
+      hoverEffect={true}
     >
       <header className="flex flex-col items-center text-center -mt-4" >
         {icon}
@@ -17,6 +20,6 @@ export function SkillCard({ name, description, icon }: SkillCardProps) {
       <main className="text-sm px-4 pb-4" >
         <p>{description}</p>
       </main>
-    </article>
+    </DefaultCard>
   )
 }
