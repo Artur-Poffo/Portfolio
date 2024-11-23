@@ -55,7 +55,7 @@ const projects = [
 export function ProjectsSection() {
   return (
     <section id="projects" className="section-container">
-      <SectionTitle label="Projetos" />
+      <SectionTitle label="Projetos" title="Meus Projetos" center />
 
       <div className="w-full flex flex-col items-center gap-10">
         <AnimatedList
