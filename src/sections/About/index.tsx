@@ -39,6 +39,8 @@ export function AboutSection() {
                   programa de formação do Entra21
                 </span>,
               ]}
+              withDelay
+              withListStyle
             />
           </div>
         </div>

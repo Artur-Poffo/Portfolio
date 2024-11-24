@@ -38,7 +38,7 @@
 
 @layer components {
   .section-container {
-    @apply py-10 max-w-screen-xl mx-auto flex flex-col gap-10 px-4;
+    @apply py-10 px-4 max-w-screen-xl mx-auto;
   }
 }
 

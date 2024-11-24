@@ -1,17 +1,24 @@
-'use client'
+"use client";
 
 import { motion } from "framer-motion";
 
 interface AnimatedListProps {
-  items: React.ReactNode[]
-  className?: string
-  withDelay?: boolean
-  withListStyle?: boolean
-  animationOrientation?: 'horizontal' | 'vertical'
-  duration?: number
+  items: React.ReactNode[];
+  className?: string;
+  withDelay?: boolean;
+  withListStyle?: boolean;
+  animationOrientation?: "horizontal" | "vertical";
+  duration?: number;
 }
 
-export function AnimatedList({ items, className, withDelay = true, withListStyle = true, animationOrientation = 'horizontal', duration = 0.6 }: AnimatedListProps) {
+export function AnimatedList({
+  items,
+  className,
+  withDelay = false,
+  withListStyle = false,
+  animationOrientation = "horizontal",
+  duration = 0.6,
+}: AnimatedListProps) {
   const variants = {
     horizontal: {
       initial: { opacity: 0, x: 10 },
@@ -21,10 +28,12 @@ export function AnimatedList({ items, className, withDelay = true, withListStyle
       initial: { opacity: 0, y: 10 },
       inView: { opacity: 1, y: 0 },
     },
-  }
+  };
 
   return (
-    <ul className={`${className ? className : 'w-full flex flex-col gap-2'} ${withListStyle ? 'list-disc list-inside' : ''}`} >
+    <ul
+      className={`${className ? className : "w-full flex flex-col gap-2"} ${withListStyle ? "list-disc list-inside" : ""}`}
+    >
       {items.map((item, index) => (
         <motion.li
           key={index}
@@ -36,5 +45,5 @@ export function AnimatedList({ items, className, withDelay = true, withListStyle
         </motion.li>
       ))}
     </ul>
-  )
+  );
 }

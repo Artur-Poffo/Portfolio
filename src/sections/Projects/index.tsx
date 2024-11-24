@@ -59,7 +59,7 @@ const projects = [
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="section-container">
+    <section id="projects" className="section-container flex flex-col gap-10">
       <header className="w-full flex justify-center">
         <SectionTitle label="Projetos" title="Meus Projetos" center />
       </header>
@@ -76,9 +76,6 @@ export function ProjectsSection() {
               reverse={index % 2 === 0}
             />
           ))}
-          animationOrientation="horizontal"
-          withDelay={false}
-          withListStyle={false}
           duration={0.8}
           className="w-full flex flex-col gap-8"
         />
