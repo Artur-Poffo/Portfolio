@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import "../globals.css";
 import { Navbar } from "@/components/Navigation/Navbar";
-import { Inter } from 'next/font/google';
+import { Inter } from "next/font/google";
 import { FloatSocialMediaLinks } from "@/components/Navigation/FloatSocialMediaLinks";
+import { Footer } from "@/components/Navigation/Footer";
 
 const inter = Inter({
-  subsets: ['latin'],
+  subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-inter",
 });
@@ -26,9 +27,9 @@ export default function RootLayout({
         <Navbar />
         <FloatSocialMediaLinks />
 
-        <main className="w-full min-h-screen antialiased">
-          {children}
-        </main>
+        <main className="w-full min-h-screen antialiased">{children}</main>
+
+        <Footer />
       </body>
     </html>
   );
