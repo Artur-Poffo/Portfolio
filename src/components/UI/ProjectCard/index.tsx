@@ -12,6 +12,7 @@ interface ProjectCardProps {
   reverse?: boolean;
 }
 
+// TODO: Create minimal variant
 export function ProjectCard({
   title,
   description,

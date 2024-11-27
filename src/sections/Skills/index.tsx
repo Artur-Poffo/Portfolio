@@ -55,7 +55,6 @@ export function SkillsSection() {
               icon={skill.icon}
             />
           ))}
-          className="flex flex-wrap gap-x-4 gap-y-8"
           animationOrientation="vertical"
         />
 

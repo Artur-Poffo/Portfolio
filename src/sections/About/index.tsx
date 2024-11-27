@@ -41,6 +41,7 @@ export function AboutSection() {
               ]}
               withDelay
               withListStyle
+              className="flex flex-col gap-2"
             />
           </div>
         </div>

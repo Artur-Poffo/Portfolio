@@ -32,7 +32,11 @@ export function AnimatedList({
 
   return (
     <ul
-      className={`${className ? className : "w-full flex flex-col gap-2"} ${withListStyle ? "list-disc list-inside" : ""}`}
+      className={`${
+        className
+          ? className
+          : "w-fit grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-8 mx-auto"
+      } ${withListStyle ? "list-disc list-inside" : ""}`}
     >
       {items.map((item, index) => (
         <motion.li
