@@ -26,22 +26,22 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="section-container min-h-screen flex items-center justify-center"
+      className="section-container min-h-screen flex flex-col xl:flex-row items-center gap-10 xl:gap-0 justify-center"
     >
-      <div className="w-1/2 h-full flex items-center justify-start relative">
+      <div className="w-full xl:w-1/2 h-full flex items-center justify-center xl:justify-start relative">
         <SectionTitle label="Contato" title="Entre em contato" />
 
-        <div className="w-px h-[800px] absolute top-1/2 -translate-y-1/2 right-0 bg-gradient-to-b from-transparent via-neutrals-500 to-transparent" />
+        <div className="hidden xl:block w-px h-[800px] absolute top-1/2 -translate-y-1/2 right-0 bg-gradient-to-b from-transparent via-neutrals-500 to-transparent" />
       </div>
 
-      <div className="w-1/2 h-full flex items-center justify-end">
+      <div className="w-full xl:w-1/2 h-full flex items-center justify-end">
         <AnimatedList
           items={mediaLinks.map((link, index) => (
             <MediaLinkCard
-              key={index}
               icon={link.icon}
               label={link.label}
               link={link.url}
+              key={index}
             />
           ))}
           withDelay

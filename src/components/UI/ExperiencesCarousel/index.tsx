@@ -31,8 +31,8 @@ export function ExperiencesCarousel() {
         <CarouselItem>...</CarouselItem>
       </CarouselContent>
 
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="hidden xl:flex" />
+      <CarouselNext className="hidden xl:flex" />
     </Carousel>
   );
 }

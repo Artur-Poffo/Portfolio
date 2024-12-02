@@ -4,6 +4,7 @@ import { Navbar } from "@/components/Navigation/Navbar";
 import { Inter } from "next/font/google";
 import { FloatSocialMediaLinks } from "@/components/Navigation/FloatSocialMediaLinks";
 import { Footer } from "@/components/Navigation/Footer";
+import { MobileMenu } from "@/components/Navigation/MobileMenu";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function RootLayout({
     <html lang="pt-BR" className={inter.className}>
       <body>
         <Navbar />
+        <MobileMenu />
         <FloatSocialMediaLinks />
 
         <main className="w-full min-h-screen antialiased">{children}</main>

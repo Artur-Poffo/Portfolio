@@ -5,8 +5,8 @@ import Image from "next/image";
 export function AboutSection() {
   return (
     <section id="about" className="w-full h-screen">
-      <div className="w-full h-full flex items-center justify-center">
-        <div className="w-1/2 h-full">
+      <div className="w-full h-full flex flex-col xl:flex-row items-center justify-center gap-10 xl:gap-0">
+        <div className="w-full xl:w-1/2 h-full">
           <Image
             src={"/about-image.jpg"}
             width={800}
@@ -16,8 +16,8 @@ export function AboutSection() {
           />
         </div>
 
-        <div className="w-1/2 h-full flex flex-col items-start justify-center gap-4 pl-20">
-          <div className="max-w-2xl flex flex-col gap-4">
+        <div className="w-full xl:w-1/2 h-full flex flex-col items-center xl:items-start justify-center gap-4 xl:pl-20">
+          <div className="max-w-2xl flex flex-col items-center xl:items-start gap-4">
             <SectionTitle label="Sobre" title="Artur Poffo" />
 
             <AnimatedList
@@ -41,7 +41,7 @@ export function AboutSection() {
               ]}
               withDelay
               withListStyle
-              className="flex flex-col gap-2"
+              className="max-w-lg text-center xl:text-left xl:w-full flex flex-col gap-2 px-2 xl:px-0"
             />
           </div>
         </div>

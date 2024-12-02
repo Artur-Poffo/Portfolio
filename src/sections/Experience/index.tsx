@@ -8,7 +8,7 @@ export function ExperienceSection() {
         <SectionTitle label="Experiência" title="Minha Experiência" center />
       </header>
 
-      <div className="w-full">
+      <div className="max-w-screen-xl">
         <ExperiencesCarousel />
       </div>
     </section>

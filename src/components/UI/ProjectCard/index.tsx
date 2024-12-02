@@ -48,10 +48,7 @@ export function ProjectCard({
           <div className="w-full rounded-md bg-primary/10 px-4 py-1">
             <ul className="flex flex-wrap">
               {links.map((link, index) => (
-                <li
-                  key={link.label}
-                  className="text-primary font-semibold text-sm"
-                >
+                <li key={link.label} className="text-primary font-semibold">
                   <a href={link.url} target="_blank">
                     {link.label}
                   </a>

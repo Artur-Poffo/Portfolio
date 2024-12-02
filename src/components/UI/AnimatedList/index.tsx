@@ -40,6 +40,7 @@ export function AnimatedList({
     >
       {items.map((item, index) => (
         <motion.li
+          className="w-full sm:w-auto"
           key={index}
           initial={variants[animationOrientation].initial}
           whileInView={variants[animationOrientation].inView}
