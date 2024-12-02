@@ -18,9 +18,9 @@ export function ResourceGroup({
     <div className="flex flex-col gap-6">
       <h3 className="text-3xl font-bold font-mono">{groupName}</h3>
 
-      <ul className="w-fit grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-8">
+      <ul className="w-full sm:w-fit grid grid-cols-1 mx-auto lg:grid-cols-2 lg:mx-0 xl:grid-cols-3 gap-x-4 gap-y-8">
         {skills.map((skill) => (
-          <li key={skill.name}>
+          <li className="w-full" key={skill.name}>
             <SkillCard
               name={skill.name}
               description={skill.description}
@@ -30,12 +30,13 @@ export function ResourceGroup({
         ))}
 
         {projects.map((project) => (
-          <li key={project.name}>
+          <li className="w-full" key={project.name}>
             <ProjectCard
               title={project.name}
               description={project.description}
-              image={project.icon}
+              image={project.image}
               links={project.links}
+              minimal
             />
           </li>
         ))}

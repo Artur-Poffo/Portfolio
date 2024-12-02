@@ -10,128 +10,106 @@ interface ProjectsGroupedByResourceGroup {
 const projects: ProjectsGroupedByResourceGroup = {
   "Front End": [
     {
-      name: "E-commerce Website",
-      description: "A modern e-commerce platform built with React and Next.js",
-      icon: "/projects/ecommerce.png",
-      links: [],
+      name: "Project One",
+      description: "This is the description for Project One.",
+      image:
+        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fHByb2plY3R8ZW58MHx8fHwxNjY5MjY0NzY2&ixlib=rb-1.2.1&q=80&w=400",
+      links: [
+        { label: "GitHub", url: "https://github.com/project-one" },
+        { label: "Live Demo", url: "https://project-one.com" },
+      ],
     },
     {
-      name: "Social Media Dashboard",
-      description:
-        "Real-time social media analytics dashboard using React and D3.js",
-      icon: "/projects/dashboard.png",
-      links: [],
+      name: "Project Two",
+      description: "This is the description for Project Two.",
+      image:
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fHByb2plY3R8ZW58MHx8fHwxNjY5MjY0NzY2&ixlib=rb-1.2.1&q=80&w=400",
+      links: [
+        { label: "GitHub", url: "https://github.com/project-two" },
+        { label: "Live Demo", url: "https://project-two.com" },
+      ],
     },
     {
-      name: "Portfolio Website",
-      description:
-        "Personal portfolio website built with Next.js and TailwindCSS",
-      icon: "/projects/portfolio.png",
-      links: [],
+      name: "Project Three",
+      description: "This is the description for Project Three.",
+      image:
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fHByb2plY3R8ZW58MHx8fHwxNjY5MjY0NzY2&ixlib=rb-1.2.1&q=80&w=400",
+      links: [
+        { label: "GitHub", url: "https://github.com/project-three" },
+        { label: "Live Demo", url: "https://project-three.com" },
+      ],
     },
     {
-      name: "Task Management App",
-      description: "Drag-and-drop task management application using React DnD",
-      icon: "/projects/tasks.png",
-      links: [],
+      name: "Project Four",
+      description: "This is the description for Project Four.",
+      image:
+        "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDR8fHByb2plY3R8ZW58MHx8fHwxNjY5MjY0NzY2&ixlib=rb-1.2.1&q=80&w=400",
+      links: [
+        { label: "GitHub", url: "https://github.com/project-four" },
+        { label: "Live Demo", url: "https://project-four.com" },
+      ],
     },
     {
-      name: "Weather Dashboard",
-      description: "Weather forecast application using OpenWeather API",
-      icon: "/projects/weather.png",
-      links: [],
-    },
-    {
-      name: "Recipe Finder",
-      description: "Recipe search and filtering application with React",
-      icon: "/projects/recipe.png",
-      links: [],
-    },
-    {
-      name: "Movie Database",
-      description: "Movie information and review platform using TMDB API",
-      icon: "/projects/movies.png",
-      links: [],
-    },
-    {
-      name: "Chat Application",
-      description: "Real-time chat application with React and Socket.io",
-      icon: "/projects/chat.png",
-      links: [],
-    },
-    {
-      name: "Music Player",
-      description: "Web-based music player with playlist management",
-      icon: "/projects/music.png",
-      links: [],
-    },
-    {
-      name: "Blog Platform",
-      description: "Content management system for blogging",
-      icon: "/projects/blog.png",
-      links: [],
+      name: "Project Five",
+      description: "This is the description for Project Five.",
+      image:
+        "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDV8fHByb2plY3R8ZW58MHx8fHwxNjY5MjY0NzY2&ixlib=rb-1.2.1&q=80&w=400",
+      links: [
+        { label: "GitHub", url: "https://github.com/project-five" },
+        { label: "Live Demo", url: "https://project-five.com" },
+      ],
     },
   ],
   "Back End": [
     {
-      name: "REST API Service",
-      description: "RESTful API built with Node.js and Express",
-      icon: "/projects/api.png",
-      links: [],
+      name: "Project One",
+      description: "This is the description for Project One.",
+      image:
+        "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fHByb2plY3R8ZW58MHx8fHwxNjY5MjY0NzY2&ixlib=rb-1.2.1&q=80&w=400",
+      links: [
+        { label: "GitHub", url: "https://github.com/project-one" },
+        { label: "Live Demo", url: "https://project-one.com" },
+      ],
     },
     {
-      name: "Authentication System",
-      description: "JWT-based authentication service with Node.js",
-      icon: "/projects/auth.png",
-      links: [],
+      name: "Project Two",
+      description: "This is the description for Project Two.",
+      image:
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fHByb2plY3R8ZW58MHx8fHwxNjY5MjY0NzY2&ixlib=rb-1.2.1&q=80&w=400",
+      links: [
+        { label: "GitHub", url: "https://github.com/project-two" },
+        { label: "Live Demo", url: "https://project-two.com" },
+      ],
     },
     {
-      name: "Database Manager",
-      description: "Database management system with MongoDB",
-      icon: "/projects/database.png",
-      links: [],
+      name: "Project Three",
+      description: "This is the description for Project Three.",
+      image:
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fHByb2plY3R8ZW58MHx8fHwxNjY5MjY0NzY2&ixlib=rb-1.2.1&q=80&w=400",
+      links: [
+        { label: "GitHub", url: "https://github.com/project-three" },
+        { label: "Live Demo", url: "https://project-three.com" },
+      ],
     },
     {
-      name: "File Storage Service",
-      description: "Cloud storage service with AWS S3 integration",
-      icon: "/projects/storage.png",
-      links: [],
+      name: "Project Four",
+      description: "This is the description for Project Four.",
+      image:
+        "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDR8fHByb2plY3R8ZW58MHx8fHwxNjY5MjY0NzY2&ixlib=rb-1.2.1&q=80&w=400",
+      links: [
+        { label: "GitHub", url: "https://github.com/project-four" },
+        { label: "Live Demo", url: "https://project-four.com" },
+      ],
     },
     {
-      name: "Payment Gateway",
-      description: "Payment processing service with Stripe integration",
-      icon: "/projects/payment.png",
-      links: [],
-    },
-    {
-      name: "Email Service",
-      description: "Email notification system with SendGrid",
-      icon: "/projects/email.png",
-      links: [],
-    },
-    {
-      name: "Search Engine",
-      description: "Full-text search engine with Elasticsearch",
-      icon: "/projects/search.png",
-      links: [],
-    },
-    {
-      name: "Message Queue",
-      description: "Message broker system with RabbitMQ",
-      icon: "/projects/queue.png",
-      links: [],
-    },
-    {
-      name: "GraphQL API",
-      description: "GraphQL API server with Apollo",
-      icon: "/projects/graphql.png",
-      links: [],
-    },
-    {
-      name: "Caching Service",
-      description: "Redis-based caching system",
-      icon: "/projects/cache.png",
-      links: [],
+      name: "Project Five",
+      description: "This is the description for Project Five.",
+      image:
+        "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDV8fHByb2plY3R8ZW58MHx8fHwxNjY5MjY0NzY2&ixlib=rb-1.2.1&q=80&w=400",
+      links: [
+        { label: "GitHub", url: "https://github.com/project-five" },
+        { label: "Live Demo", url: "https://project-five.com" },
+      ],
     },
   ],
 };
