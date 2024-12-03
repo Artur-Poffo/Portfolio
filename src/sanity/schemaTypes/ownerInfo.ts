@@ -32,7 +32,7 @@ export const ownerInfoType = defineType({
       name: 'socialLinks',
       title: 'Social Links',
       type: 'array',
-      of: [{ type: 'object', fields: [{ name: 'platform', type: 'string', title: 'Platform' }, { name: 'url', type: 'url', title: 'URL' }] }],
+      of: [{ type: 'object', fields: [{ name: 'platform', type: 'string', title: 'Platform' }, { name: 'url', type: 'string', title: 'URL' }] }],
     }),
   ],
 })

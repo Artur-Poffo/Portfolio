@@ -1,13 +1,13 @@
 import { defineField, defineType } from "sanity";
 
-export const skillType = defineType({
-  name: "skill",
-  title: "Skill",
+export const experienceType = defineType({
+  name: "experience",
+  title: "Experience",
   type: "document",
   fields: [
     defineField({
-      name: "name",
-      title: "Name",
+      name: "role",
+      title: "Role",
       type: "string",
       validation: (rule) => rule.required(),
     }),
@@ -18,26 +18,21 @@ export const skillType = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: "icon",
-      title: "Icon",
+      name: "logo",
+      title: "Logo",
       type: "image",
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: "resourceGroup",
-      title: "Resource Group",
-      type: "reference",
-      to: [{ type: "resourceGroup" }],
-      options: {
-        filter: 'resourceType == "skill"',
-      },
+      name: "startDate",
+      title: "Start Date",
+      type: "date",
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: "isPinned",
-      title: "Is Pinned",
-      type: "boolean",
-      initialValue: false,
+      name: "endDate",
+      title: "End Date",
+      type: "date",
     }),
   ],
 });
