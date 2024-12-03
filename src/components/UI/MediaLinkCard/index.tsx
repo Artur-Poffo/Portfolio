@@ -1,15 +1,9 @@
 import Link from "next/link";
 import { DefaultCard } from "../DefaultCard";
-import { LucideProps } from "lucide-react";
-import { ForwardRefExoticComponent, RefAttributes } from "react";
-import { IconProps } from "@radix-ui/react-icons/dist/types";
-
-type IconComponent =
-  | ForwardRefExoticComponent<IconProps & RefAttributes<SVGSVGElement>>
-  | ForwardRefExoticComponent<Omit<LucideProps, "ref">>;
+import { ElementType } from "react";
 
 interface MediaLinkCardProps {
-  icon: IconComponent;
+  icon: ElementType;
   label: string;
   link: string;
 }

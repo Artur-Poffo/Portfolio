@@ -1,28 +1,16 @@
+"use client";
+
 import { AnimatedList } from "@/components/UI/AnimatedList";
 import { MediaLinkCard } from "@/components/UI/MediaLinkCard";
 import { SectionTitle } from "@/components/UI/SectionTitle";
-import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-import { MessageSquare } from "lucide-react";
-
-const mediaLinks = [
-  {
-    label: "GitHub",
-    url: "https://github.com/Artur-Poffo",
-    icon: GitHubLogoIcon,
-  },
-  {
-    label: "LinkedIn",
-    url: "https://www.linkedin.com/in/arturpoffo/",
-    icon: LinkedInLogoIcon,
-  },
-  {
-    label: "E-mail",
-    url: "mailto:arturpoffop@gmail.com",
-    icon: MessageSquare,
-  },
-];
+import { useOwnerInfo } from "@/contexts/OwnerInfo";
+import { socialLinksIconsMapper } from "@/utils/socialLinksIconsMapper";
 
 export function ContactSection() {
+  const { ownerInfo } = useOwnerInfo();
+
+  if (!ownerInfo) return null;
+
   return (
     <section
       id="contact"
@@ -36,14 +24,20 @@ export function ContactSection() {
 
       <div className="w-full xl:w-1/2 h-full flex items-center justify-end">
         <AnimatedList
-          items={mediaLinks.map((link, index) => (
-            <MediaLinkCard
-              icon={link.icon}
-              label={link.label}
-              link={link.url}
-              key={index}
-            />
-          ))}
+          items={ownerInfo.socialLinks.map((link, index) => {
+            const Icon = socialLinksIconsMapper[link.platform.toLowerCase()];
+
+            if (!Icon) return null;
+
+            return (
+              <MediaLinkCard
+                icon={Icon}
+                label={link.platform}
+                link={link.url}
+                key={index}
+              />
+            );
+          })}
           withDelay
           className="w-full flex flex-col items-center justify-center gap-4"
         />

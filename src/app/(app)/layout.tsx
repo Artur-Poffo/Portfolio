@@ -5,6 +5,8 @@ import { Inter } from "next/font/google";
 import { FloatSocialMediaLinks } from "@/components/Navigation/FloatSocialMediaLinks";
 import { Footer } from "@/components/Navigation/Footer";
 import { MobileMenu } from "@/components/Navigation/MobileMenu";
+import { OwnerInfoContextProvider } from "@/contexts/OwnerInfo";
+import { getOwnerInfo } from "@/sanity/queries/getOwnerInfo";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,21 +19,25 @@ export const metadata: Metadata = {
   description: "Portfólio do desenvolvedor Artur Poffo",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const ownerInfo = await getOwnerInfo();
+
   return (
     <html lang="pt-BR" className={inter.className}>
       <body>
-        <Navbar />
-        <MobileMenu />
-        <FloatSocialMediaLinks />
+        <OwnerInfoContextProvider serverSideOwnerInfo={ownerInfo}>
+          <Navbar />
+          <MobileMenu />
+          <FloatSocialMediaLinks />
 
-        <main className="w-full min-h-screen antialiased">{children}</main>
+          <main className="w-full min-h-screen antialiased">{children}</main>
 
-        <Footer />
+          <Footer />
+        </OwnerInfoContextProvider>
       </body>
     </html>
   );
