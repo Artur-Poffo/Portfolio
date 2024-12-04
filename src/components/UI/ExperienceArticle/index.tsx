@@ -1,32 +1,45 @@
+import Image from "next/image";
+
 interface ExperienceArticleProps {
-  company: {
-    name: string;
-    logo: string;
-  };
   role: string;
-  period: {
-    start: string;
-    end: string;
-  };
   description: string;
+  logo: string;
+  startDate: string;
+  endDate?: string;
 }
 
 export function ExperienceArticle({
-  company,
   role,
-  period,
   description,
+  logo,
+  startDate,
+  endDate,
 }: ExperienceArticleProps) {
+  function parseDate(date: string) {
+    return new Date(date).toLocaleDateString("pt-BR", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    });
+  }
+
   return (
     <article className="w-full flex flex-col gap-4">
       <header className="w-full flex flex-col gap-4">
-        <img className="w-14 h-14 rounded-md" src={company.logo} />
+        <Image
+          className="w-14 h-14 rounded-md"
+          src={logo}
+          alt={role}
+          width={80}
+          height={80}
+        />
 
         <div>
           <h3 className="text-primary text-4xl font-bold font-mono">{role}</h3>
 
           <span className="text-sm text-neutrals-400">
-            {period.start} - {period.end}
+            {parseDate(startDate)} -{" "}
+            {endDate ? parseDate(endDate) : "Atualmente"}
           </span>
         </div>
       </header>
