@@ -1,8 +1,8 @@
 import { Skill } from "@/sanity/queries/fetchPinnedSkills";
 import { ProjectCard } from "../ProjectCard";
 import { SkillCard } from "../SkillCard";
-import { Project } from "@/interfaces/Project";
 import { urlFor } from "@/sanity/lib/image";
+import { Project } from "@/sanity/queries/fetchPinnedProjects";
 
 interface ResourceGroupProps {
   groupName: string;
@@ -35,7 +35,7 @@ export function ResourceGroup({
             <ProjectCard
               title={project.name}
               description={project.description}
-              image={project.image}
+              image={urlFor(project.image).url()}
               links={project.links}
               minimal
             />

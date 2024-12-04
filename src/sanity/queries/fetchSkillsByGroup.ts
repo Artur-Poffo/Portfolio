@@ -13,7 +13,7 @@ export async function fetchSkillsByGroup(): Promise<SkillsByGroup[]> {
       "skills": *[_type == "skill" && references(^._id)]{
         name,
         description,
-        "icon": icon.asset->url,
+        icon,
         isPinned
       }
     }`

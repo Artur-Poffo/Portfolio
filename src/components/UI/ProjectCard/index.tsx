@@ -45,20 +45,15 @@ export function ProjectCard({
         <main className="flex flex-col justify-between h-full gap-4">
           <p className="text-neutrals-300 text-sm">{description}</p>
 
-          <div className="w-full rounded-md bg-primary/10 px-4 py-1">
-            <ul className="flex flex-wrap">
-              {links.map((link, index) => (
-                <li key={link.label} className="text-primary font-semibold">
-                  <a href={link.url} target="_blank">
-                    {link.label}
-                  </a>
-                  {index < links.length - 1 && (
-                    <span className="text-primary mx-2">|</span>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
+          {links && links.length > 0 && (
+            <div className="w-full rounded-md bg-primary/10 px-4 py-1">
+              <ul className="flex flex-wrap">
+                {links.map((link) => (
+                  <li key={link.label}>{link.label}</li>
+                ))}
+              </ul>
+            </div>
+          )}
         </main>
       </div>
 
