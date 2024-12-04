@@ -2,43 +2,13 @@ import { NavButton } from "@/components/Navigation/NavButton";
 import { AnimatedList } from "@/components/UI/AnimatedList";
 import { SectionTitle } from "@/components/UI/SectionTitle";
 import { SkillCard } from "@/components/UI/SkillCard";
-import { ArrowUpIcon } from "@radix-ui/react-icons";
+import { urlFor } from "@/sanity/lib/image";
+import { fetchPinnedSkills } from "@/sanity/queries/fetchPinnedSkills";
 import { MoveRight } from "lucide-react";
 
-const skills = [
-  {
-    name: "HTML",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-    icon: <ArrowUpIcon />,
-  },
-  {
-    name: "HTML",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-    icon: <ArrowUpIcon />,
-  },
-  {
-    name: "HTML",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-    icon: <ArrowUpIcon />,
-  },
-  {
-    name: "HTML",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-    icon: <ArrowUpIcon />,
-  },
-  {
-    name: "HTML",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-    icon: <ArrowUpIcon />,
-  },
-];
+export async function SkillsSection() {
+  const pinnedSkills = await fetchPinnedSkills();
 
-export function SkillsSection() {
   return (
     <section id="skills" className="section-container flex flex-col gap-10">
       <header className="w-full flex justify-center">
@@ -47,12 +17,12 @@ export function SkillsSection() {
 
       <div className="flex flex-col items-center gap-10">
         <AnimatedList
-          items={skills.map((skill, index) => (
+          items={pinnedSkills.map((skill, index) => (
             <SkillCard
               key={index}
               name={skill.name}
               description={skill.description}
-              icon={skill.icon}
+              icon={urlFor(skill.icon).url()}
             />
           ))}
           animationOrientation="vertical"

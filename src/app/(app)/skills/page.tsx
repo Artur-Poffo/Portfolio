@@ -1,56 +1,11 @@
 import { SectionTitle } from "@/components/UI/SectionTitle";
 import { ResourceGroup } from "@/components/UI/ResourceGroup";
 import { ContactSection } from "@/sections/Contact";
-import { Skill } from "@/interfaces/Skill";
+import { fetchSkillsByGroup } from "@/sanity/queries/fetchSkillsByGroup";
 
-interface SkillsGroupedByResourceGroup {
-  [resourceGroupName: string]: Skill[];
-}
+export default async function Skills() {
+  const skillsByGroup = await fetchSkillsByGroup();
 
-const skills: SkillsGroupedByResourceGroup = {
-  "Front End": [
-    {
-      name: "React",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-      icon: "react",
-    },
-    {
-      name: "Next.js",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-      icon: "nextjs",
-    },
-    {
-      name: "Next.js",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-      icon: "nextjs",
-    },
-    {
-      name: "Next.js",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-      icon: "nextjs",
-    },
-    {
-      name: "Next.js",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-      icon: "nextjs",
-    },
-  ],
-  "Back End": [
-    {
-      name: "Node.js",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
-      icon: "nodejs",
-    },
-  ],
-};
-
-export default function Skills() {
   return (
     <>
       <section
@@ -61,10 +16,10 @@ export default function Skills() {
           <SectionTitle label="Habilidades" title="Minhas Habilidades" center />
         </header>
 
-        {Object.entries(skills).map(([resourceGroup, skills]) => (
+        {skillsByGroup.map(({ groupName, skills }) => (
           <ResourceGroup
-            key={resourceGroup}
-            groupName={resourceGroup}
+            key={groupName}
+            groupName={groupName}
             skills={skills}
           />
         ))}

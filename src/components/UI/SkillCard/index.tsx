@@ -1,9 +1,10 @@
+import Image from "next/image";
 import { DefaultCard } from "../DefaultCard";
 
 interface SkillCardProps {
   name: string;
   description: string;
-  icon: React.ReactNode;
+  icon: string;
 }
 
 export function SkillCard({ name, description, icon }: SkillCardProps) {
@@ -13,8 +14,9 @@ export function SkillCard({ name, description, icon }: SkillCardProps) {
       translateEffect
       borderEffect
     >
-      <header className="flex flex-col items-center text-center -mt-4">
-        {icon}
+      <header className="flex flex-col items-center text-center gap-1 -mt-4">
+        <Image src={icon} alt={name} width={50} height={50} />
+
         <h3 className="text-2xl sm:text-3xl text-primary font-bold font-mono">
           {name}
         </h3>
