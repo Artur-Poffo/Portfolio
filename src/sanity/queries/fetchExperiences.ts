@@ -1,5 +1,5 @@
 import { Image } from "sanity";
-import { client } from "../lib/client";
+import { sanityFetch } from "../lib/client";
 
 export interface Experience {
   role: string;
@@ -10,7 +10,8 @@ export interface Experience {
 }
 
 export async function fetchExperiences() {
-  return client.fetch<Experience[]>(
-    `*[_type == "experience"] | order(coalesce(endDate, "9999-12-31") desc, startDate desc)`
-  );
+  return sanityFetch<Experience[]>({
+    query: `*[_type == "experience"] | order(coalesce(endDate, "9999-12-31") desc, startDate desc)`,
+    tags: ["experience"],
+  });
 }

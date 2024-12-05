@@ -1,5 +1,5 @@
 import { Image } from "sanity";
-import { client } from "../lib/client";
+import { sanityFetch } from "../lib/client";
 
 export interface Project {
   name: string;
@@ -12,7 +12,8 @@ export interface Project {
 }
 
 export async function fetchPinnedProjects() {
-  return client.fetch<Project[]>(
-    `*[_type == "project" && isPinned == true] | order(_updatedAt desc)`
-  );
+  return sanityFetch<Project[]>({
+    query: `*[_type == "project" && isPinned == true] | order(_updatedAt desc)`,
+    tags: ["project"],
+  });
 }

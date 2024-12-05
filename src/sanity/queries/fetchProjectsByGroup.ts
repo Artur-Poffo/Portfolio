@@ -1,4 +1,4 @@
-import { client } from "../lib/client";
+import { sanityFetch } from "../lib/client";
 import { Project } from "./fetchPinnedProjects";
 
 export interface ProjectsByGroup {
@@ -7,8 +7,8 @@ export interface ProjectsByGroup {
 }
 
 export async function fetchProjectsByGroup(): Promise<ProjectsByGroup[]> {
-  const result = await client.fetch<ProjectsByGroup[]>(
-    `*[_type == "resourceGroup" && resourceType == "project"]{
+  return sanityFetch<ProjectsByGroup[]>({
+    query: `*[_type == "resourceGroup" && resourceType == "project"]{
       "groupName": name,
       "projects": *[_type == "project" && references(^._id)]{
         name,
@@ -17,8 +17,7 @@ export async function fetchProjectsByGroup(): Promise<ProjectsByGroup[]> {
         links,
         isPinned
       }
-    }`
-  );
-
-  return result;
+    }`,
+    tags: ["project", "resourceGroup"],
+  });
 }

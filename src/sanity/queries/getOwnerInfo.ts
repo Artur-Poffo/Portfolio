@@ -1,5 +1,5 @@
 import { Image } from "sanity";
-import { client } from "../lib/client";
+import { sanityFetch } from "../lib/client";
 
 export interface OwnerInfo {
   fullName: string;
@@ -13,5 +13,8 @@ export interface OwnerInfo {
 }
 
 export async function getOwnerInfo(): Promise<OwnerInfo> {
-  return client.fetch<OwnerInfo>(`*[_type == "ownerInfo"][0]`);
+  return sanityFetch<OwnerInfo>({
+    query: `*[_type == "ownerInfo"][0]`,
+    tags: ["ownerInfo"],
+  });
 }

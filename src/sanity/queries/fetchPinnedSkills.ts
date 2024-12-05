@@ -1,5 +1,5 @@
 import { Image } from "sanity";
-import { client } from "../lib/client";
+import { sanityFetch } from "../lib/client";
 
 export interface Skill {
   name: string;
@@ -8,7 +8,8 @@ export interface Skill {
 }
 
 export async function fetchPinnedSkills() {
-  return client.fetch<Skill[]>(
-    `*[_type == "skill" && isPinned == true] | order(_updatedAt desc)`
-  );
+  return sanityFetch<Skill[]>({
+    query: `*[_type == "skill" && isPinned == true] | order(_updatedAt desc)`,
+    tags: ["skill"],
+  });
 }

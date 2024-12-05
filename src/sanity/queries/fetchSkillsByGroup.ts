@@ -1,4 +1,4 @@
-import { client } from "../lib/client";
+import { sanityFetch } from "../lib/client";
 import { Skill } from "./fetchPinnedSkills";
 
 export interface SkillsByGroup {
@@ -7,8 +7,8 @@ export interface SkillsByGroup {
 }
 
 export async function fetchSkillsByGroup(): Promise<SkillsByGroup[]> {
-  const result = await client.fetch<SkillsByGroup[]>(
-    `*[_type == "resourceGroup" && resourceType == "skill"]{
+  return sanityFetch<SkillsByGroup[]>({
+    query: `*[_type == "resourceGroup" && resourceType == "skill"]{
       "groupName": name,
       "skills": *[_type == "skill" && references(^._id)]{
         name,
@@ -16,8 +16,7 @@ export async function fetchSkillsByGroup(): Promise<SkillsByGroup[]> {
         icon,
         isPinned
       }
-    }`
-  );
-
-  return result;
+    }`,
+    tags: ["skill", "resourceGroup"],
+  });
 }
