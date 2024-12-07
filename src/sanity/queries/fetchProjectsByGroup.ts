@@ -8,7 +8,7 @@ export interface ProjectsByGroup {
 
 export async function fetchProjectsByGroup(): Promise<ProjectsByGroup[]> {
   return sanityFetch<ProjectsByGroup[]>({
-    query: `*[_type == "resourceGroup" && resourceType == "project"]{
+    query: `*[_type == "resourceGroup" && resourceType == "project"] | order(_updatedAt desc) {
       "groupName": name,
       "projects": *[_type == "project" && references(^._id)]{
         name,

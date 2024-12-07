@@ -8,7 +8,7 @@ export interface SkillsByGroup {
 
 export async function fetchSkillsByGroup(): Promise<SkillsByGroup[]> {
   return sanityFetch<SkillsByGroup[]>({
-    query: `*[_type == "resourceGroup" && resourceType == "skill"]{
+    query: `*[_type == "resourceGroup" && resourceType == "skill"] | order(_updatedAt desc) {
       "groupName": name,
       "skills": *[_type == "skill" && references(^._id)]{
         name,
