@@ -54,6 +54,7 @@ export function ProjectCard({
                       className="text-primary font-bold"
                       href={link.url}
                       key={link.label}
+                      target="_blank"
                     >
                       {link.label}
                     </Link>
