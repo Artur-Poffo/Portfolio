@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { DefaultCard } from "../DefaultCard";
+import Link from "next/link";
 
 interface ProjectCardProps {
   title: string;
@@ -16,7 +17,6 @@ interface ProjectCardProps {
 /*
   PARA CASOS MAIS COMPLEXOS, RECOMENDO O USO DE UMA LIB EXTERNA COMO O "TAILWIND VARIANTS"
 */
-
 export function ProjectCard({
   title,
   description,
@@ -48,8 +48,19 @@ export function ProjectCard({
           {links && links.length > 0 && (
             <div className="w-full rounded-md bg-primary/10 px-4 py-1">
               <ul className="flex flex-wrap">
-                {links.map((link) => (
-                  <li key={link.label}>{link.label}</li>
+                {links.map((link, index) => (
+                  <>
+                    <Link
+                      className="text-primary font-bold"
+                      href={link.url}
+                      key={link.label}
+                    >
+                      {link.label}
+                    </Link>
+                    {index < links.length - 1 && (
+                      <span className="text-primary font-bold mx-2">|</span>
+                    )}
+                  </>
                 ))}
               </ul>
             </div>
