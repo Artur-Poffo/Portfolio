@@ -14,7 +14,7 @@ export function SkillCard({ name, description, icon }: SkillCardProps) {
       translateEffect
       borderEffect
     >
-      <header className="flex flex-col items-center text-center gap-1 -mt-4">
+      <header className="flex flex-col items-center text-center gap-1 -mt-4 px-1">
         <Image src={icon} alt={name} width={50} height={50} />
 
         <h3 className="text-2xl sm:text-3xl text-primary font-bold font-mono">

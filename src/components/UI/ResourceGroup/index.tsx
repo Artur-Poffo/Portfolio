@@ -19,7 +19,7 @@ export function ResourceGroup({
     <div className="flex flex-col gap-6">
       <h3 className="text-3xl font-bold font-mono">{groupName}</h3>
 
-      <ul className="w-full sm:w-fit grid grid-cols-1 mx-auto lg:grid-cols-2 lg:mx-0 xl:grid-cols-3 gap-x-4 gap-y-8">
+      <ul className="w-full sm:w-fit grid grid-cols-1 mx-auto sm:grid-cols-2 lg:grid-cols-3 lg:mx-0 xl:grid-cols-4 gap-x-4 gap-y-8">
         {skills.map((skill) => (
           <li className="w-full" key={skill.name}>
             <SkillCard
