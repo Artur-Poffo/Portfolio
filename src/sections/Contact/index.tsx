@@ -17,7 +17,7 @@ export function ContactSection() {
       className="section-container min-h-screen flex flex-col xl:flex-row items-center gap-10 xl:gap-0 justify-center"
     >
       <div className="w-full xl:w-1/2 h-full flex items-center justify-center xl:justify-start relative">
-        <SectionTitle label="Contato" title="Entre em contato" />
+        <SectionTitle label="Contact" title="Get in touch" />
 
         <div className="hidden xl:block w-px h-[800px] absolute top-1/2 -translate-y-1/2 right-0 bg-gradient-to-b from-transparent via-neutrals-500 to-transparent" />
       </div>

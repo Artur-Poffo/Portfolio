@@ -14,9 +14,6 @@ interface ProjectCardProps {
   minimal?: boolean;
 }
 
-/*
-  PARA CASOS MAIS COMPLEXOS, RECOMENDO O USO DE UMA LIB EXTERNA COMO O "TAILWIND VARIANTS"
-*/
 export function ProjectCard({
   title,
   description,
@@ -74,7 +71,7 @@ export function ProjectCard({
       >
         <Image
           src={image}
-          alt={`Imagem do projeto: ${title}`}
+          alt={`Project image: ${title}`}
           fill
           className="object-cover rounded-md"
         />

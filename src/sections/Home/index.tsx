@@ -8,23 +8,23 @@ export function HomeSection() {
         <div className="max-w-screen-xl flex flex-col items-center justify-center gap-8 pb-20 text-neutrals-50">
           <div className="text-center flex flex-col items-center gap-2">
             <h1 className="text-5xl lg:text-6xl xl:text-8xl font-bold">
-              Olá, meu nome é Artur
+              Hi, my name is Artur
             </h1>
             <p className="text-3xl lg:text-4xl xl:text-5xl font-bold font-mono">
-              Desenvolvedor Full-Stack
+              Software Engineer
             </p>
           </div>
 
           <div className="flex flex-wrap justify-center items-center gap-4">
             <Link href={"/#about"}>
               <Button variant={"secondary"} size={"lg"}>
-                Saiba mais
+                Learn more
               </Button>
             </Link>
 
             <Link href={"/#projects"}>
               <Button variant={"outline"} size={"lg"}>
-                Meus projetos
+                My projects
               </Button>
             </Link>
           </div>

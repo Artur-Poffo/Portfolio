@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 interface ExperienceArticleProps {
@@ -16,7 +18,7 @@ export function ExperienceArticle({
   endDate,
 }: ExperienceArticleProps) {
   function parseDate(date: string) {
-    return new Date(date).toLocaleDateString("pt-BR", {
+    return new Date(date).toLocaleDateString("en-US", {
       day: "2-digit",
       month: "2-digit",
       year: "numeric",
@@ -39,7 +41,7 @@ export function ExperienceArticle({
 
           <span className="text-sm text-neutrals-400">
             {parseDate(startDate)} -{" "}
-            {endDate ? parseDate(endDate) : "Atualmente"}
+            {endDate ? parseDate(endDate) : "Present"}
           </span>
         </div>
       </header>

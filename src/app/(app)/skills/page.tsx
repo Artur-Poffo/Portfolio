@@ -13,7 +13,7 @@ export default async function Skills() {
         className="max-w-screen-xl mx-auto pt-24 flex flex-col gap-10 px-4"
       >
         <header className="flex flex-col items-center gap-4">
-          <SectionTitle label="Habilidades" title="Minhas Habilidades" center />
+          <SectionTitle label="Skills" title="My Skills" center />
         </header>
 
         {skillsByGroup.map(({ groupName, skills }) => (

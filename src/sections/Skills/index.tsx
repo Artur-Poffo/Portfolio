@@ -12,7 +12,7 @@ export async function SkillsSection() {
   return (
     <section id="skills" className="section-container flex flex-col gap-10">
       <header className="w-full flex justify-center">
-        <SectionTitle label="Habilidades" title="Minhas Habilidades" center />
+        <SectionTitle label="Skills" title="My Skills" center />
       </header>
 
       <div className="flex flex-col items-center gap-10">
@@ -28,7 +28,7 @@ export async function SkillsSection() {
           animationOrientation="vertical"
         />
 
-        <NavButton text="Ver mais" href="/skills" icon={MoveRight} />
+        <NavButton text="See more" href="/skills" icon={MoveRight} />
       </div>
     </section>
   );

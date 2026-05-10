@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Artur Poffo | Studio',
-  description: 'Portfólio do desenvolvedor Artur Poffo',
+  description: 'Portfolio of developer Artur Poffo',
 }
 
 export default function RootLayout({

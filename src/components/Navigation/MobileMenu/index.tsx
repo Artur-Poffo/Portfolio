@@ -46,7 +46,7 @@ export function MobileMenu() {
                     onClick={() => setIsOpen(false)}
                     className="w-full block p-2 transition-all hover:bg-neutrals-100/10 rounded-md"
                   >
-                    Sobre
+                    About
                   </Navlink>
                 </NavigationMenuItem>
 
@@ -56,7 +56,7 @@ export function MobileMenu() {
                     onClick={() => setIsOpen(false)}
                     className="w-full block p-2 transition-all hover:bg-neutrals-100/10 rounded-md"
                   >
-                    Habilidades
+                    Skills
                   </Navlink>
                 </NavigationMenuItem>
 
@@ -66,7 +66,7 @@ export function MobileMenu() {
                     onClick={() => setIsOpen(false)}
                     className="w-full block p-2 transition-all hover:bg-neutrals-100/10 rounded-md"
                   >
-                    Projetos
+                    Projects
                   </Navlink>
                 </NavigationMenuItem>
 
@@ -76,7 +76,7 @@ export function MobileMenu() {
                     onClick={() => setIsOpen(false)}
                     className="w-full block p-2 transition-all hover:bg-neutrals-100/10 rounded-md"
                   >
-                    Experiência
+                    Experience
                   </Navlink>
                 </NavigationMenuItem>
 
@@ -86,7 +86,7 @@ export function MobileMenu() {
                     onClick={() => setIsOpen(false)}
                     className="w-full block p-2 transition-all hover:bg-neutrals-100/10 rounded-md"
                   >
-                    Contato
+                    Contact
                   </Navlink>
                 </NavigationMenuItem>
               </NavigationMenuList>

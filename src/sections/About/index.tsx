@@ -18,14 +18,14 @@ export function AboutSection() {
             src={"/about-image.jpg"}
             width={800}
             height={800}
-            alt="about image"
+            alt="About Artur Poffo"
             className="w-full h-full object-cover"
           />
         </div>
 
         <div className="w-full xl:w-1/2 h-full flex flex-col items-center xl:items-start justify-center gap-4 xl:pl-20">
           <div className="max-w-2xl flex flex-col items-center xl:items-start gap-4">
-            <SectionTitle label="Sobre" title={ownerInfo.fullName} />
+            <SectionTitle label="About" title={ownerInfo.fullName} />
 
             <AnimatedList
               items={

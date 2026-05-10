@@ -14,23 +14,23 @@ export function Navbar() {
         </NavigationMenuItem>
 
         <NavigationMenuItem className="py-px px-2 transition-all hover:bg-neutrals-100/10 rounded-md">
-          <Navlink path="/#about">Sobre</Navlink>
+          <Navlink path="/#about">About</Navlink>
         </NavigationMenuItem>
 
         <NavigationMenuItem className="py-px px-2 transition-all hover:bg-neutrals-100/10 rounded-md">
-          <Navlink path="/skills">Habilidades</Navlink>
+          <Navlink path="/skills">Skills</Navlink>
         </NavigationMenuItem>
 
         <NavigationMenuItem className="py-px px-2 transition-all hover:bg-neutrals-100/10 rounded-md">
-          <Navlink path="/projects">Projetos</Navlink>
+          <Navlink path="/projects">Projects</Navlink>
         </NavigationMenuItem>
 
         <NavigationMenuItem className="py-px px-2 transition-all hover:bg-neutrals-100/10 rounded-md">
-          <Navlink path="/#experience">Experiência</Navlink>
+          <Navlink path="/#experience">Experience</Navlink>
         </NavigationMenuItem>
 
         <NavigationMenuItem className="py-px px-2 transition-all hover:bg-neutrals-100/10 rounded-md">
-          <Navlink path="#contact">Contato</Navlink>
+          <Navlink path="#contact">Contact</Navlink>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

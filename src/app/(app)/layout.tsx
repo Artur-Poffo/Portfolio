@@ -15,8 +15,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Artur Poffo | Portfólio",
-  description: "Portfólio do desenvolvedor Artur Poffo",
+  title: "Artur Poffo | Portfolio",
+  description: "Portfolio of developer Artur Poffo",
 };
 
 export default async function RootLayout({
@@ -27,12 +27,15 @@ export default async function RootLayout({
   const ownerInfo = await getOwnerInfo();
 
   return (
-    <html lang="pt-BR" className={inter.className}>
+    <html lang="en" className={inter.className}>
       <body>
         <OwnerInfoContextProvider serverSideOwnerInfo={ownerInfo}>
           <Navbar />
           <MobileMenu />
-          <FloatSocialMediaLinks />
+
+          <div className="fixed top-4 right-4 z-[1000] flex items-center gap-2">
+            <FloatSocialMediaLinks />
+          </div>
 
           <main className="w-full min-h-screen antialiased">{children}</main>
 

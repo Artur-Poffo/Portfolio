@@ -13,7 +13,7 @@ export default async function Projects() {
         className="max-w-screen-xl mx-auto pt-24 flex flex-col gap-10 px-4"
       >
         <header className="flex flex-col items-center gap-4">
-          <SectionTitle label="Projetos" title="Meus Projetos" center />
+          <SectionTitle label="Projects" title="My Projects" center />
         </header>
 
         {projectsByGroup.map(({ groupName, projects }) => (

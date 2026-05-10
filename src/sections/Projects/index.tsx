@@ -12,7 +12,7 @@ export async function ProjectsSection() {
   return (
     <section id="projects" className="section-container flex flex-col gap-10">
       <header className="w-full flex justify-center">
-        <SectionTitle label="Projetos" title="Meus Projetos" center />
+        <SectionTitle label="Projects" title="My Projects" center />
       </header>
 
       <div className="w-full flex flex-col items-center gap-10">
@@ -31,7 +31,7 @@ export async function ProjectsSection() {
           className="w-full flex flex-col gap-8"
         />
 
-        <NavButton text="Ver mais" href="/projects" icon={MoveRight} />
+        <NavButton text="See more" href="/projects" icon={MoveRight} />
       </div>
     </section>
   );
