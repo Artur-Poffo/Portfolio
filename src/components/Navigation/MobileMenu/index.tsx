@@ -52,7 +52,7 @@ export function MobileMenu() {
 
                 <NavigationMenuItem className="w-full">
                   <Navlink
-                    path="/skills"
+                    path="/#skills"
                     onClick={() => setIsOpen(false)}
                     className="w-full block p-2 transition-all hover:bg-neutrals-100/10 rounded-md"
                   >
@@ -62,11 +62,11 @@ export function MobileMenu() {
 
                 <NavigationMenuItem className="w-full">
                   <Navlink
-                    path="/projects"
+                    path="/work"
                     onClick={() => setIsOpen(false)}
                     className="w-full block p-2 transition-all hover:bg-neutrals-100/10 rounded-md"
                   >
-                    Projects
+                    Selected Work
                   </Navlink>
                 </NavigationMenuItem>
 

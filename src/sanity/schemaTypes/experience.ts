@@ -6,6 +6,12 @@ export const experienceType = defineType({
   type: "document",
   fields: [
     defineField({
+      name: "company",
+      title: "Company",
+      type: "string",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: "role",
       title: "Role",
       type: "string",

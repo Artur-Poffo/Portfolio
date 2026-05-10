@@ -22,9 +22,9 @@ export function HomeSection() {
               </Button>
             </Link>
 
-            <Link href={"/#projects"}>
+            <Link href={"/work"}>
               <Button variant={"outline"} size={"lg"}>
-                My projects
+                Selected work
               </Button>
             </Link>
           </div>

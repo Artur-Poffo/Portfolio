@@ -18,11 +18,11 @@ export function Navbar() {
         </NavigationMenuItem>
 
         <NavigationMenuItem className="py-px px-2 transition-all hover:bg-neutrals-100/10 rounded-md">
-          <Navlink path="/skills">Skills</Navlink>
+          <Navlink path="/#skills">Skills</Navlink>
         </NavigationMenuItem>
 
         <NavigationMenuItem className="py-px px-2 transition-all hover:bg-neutrals-100/10 rounded-md">
-          <Navlink path="/projects">Projects</Navlink>
+          <Navlink path="/work">Selected Work</Navlink>
         </NavigationMenuItem>
 
         <NavigationMenuItem className="py-px px-2 transition-all hover:bg-neutrals-100/10 rounded-md">
