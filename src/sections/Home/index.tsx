@@ -22,7 +22,7 @@ export function HomeSection() {
               </Button>
             </Link>
 
-            <Link href={"/work"}>
+            <Link href={"/#work"}>
               <Button variant={"outline"} size={"lg"}>
                 Selected work
               </Button>

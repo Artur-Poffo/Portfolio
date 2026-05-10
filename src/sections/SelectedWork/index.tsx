@@ -1,13 +1,7 @@
 import Image from "next/image";
 import { SectionTitle } from "@/components/UI/SectionTitle";
-import { NavButton } from "@/components/Navigation/NavButton";
 import { urlFor } from "@/sanity/lib/image";
 import { fetchSelectedWorkByExperience } from "@/sanity/queries/fetchSelectedWorkByExperience";
-import { MoveRight } from "lucide-react";
-
-interface SelectedWorkSectionProps {
-  withViewAllButton?: boolean;
-}
 
 function formatPeriod(startDate: string, endDate?: string) {
   const formatter = new Intl.DateTimeFormat("en-US", {
@@ -21,11 +15,11 @@ function formatPeriod(startDate: string, endDate?: string) {
   return `${start} - ${end}`;
 }
 
-export async function SelectedWorkSection({
-  withViewAllButton = true,
-}: SelectedWorkSectionProps) {
+export async function SelectedWorkSection() {
   const experiences = await fetchSelectedWorkByExperience();
-  const groups = experiences.filter((experience) => experience.works.length > 0);
+  const groups = experiences.filter(
+    (experience) => experience.works.length > 0,
+  );
 
   return (
     <section id="work" className="section-container flex flex-col gap-12">
@@ -47,7 +41,7 @@ export async function SelectedWorkSection({
             key={`${experience.company ?? experience.role}-${experience.startDate}`}
             className="grid grid-cols-1 xl:grid-cols-[280px_1fr] gap-8 border-t border-neutrals-700 pt-8"
           >
-            <aside className="flex flex-col gap-4">
+            <aside className="flex flex-col gap-4 xl:sticky xl:top-28 xl:self-start">
               <div className="flex items-center gap-4">
                 <Image
                   className="w-12 h-12 rounded-md"
@@ -61,9 +55,7 @@ export async function SelectedWorkSection({
                   <h3 className="font-bold text-xl">
                     {experience.company ?? experience.role}
                   </h3>
-                  <p className="text-sm text-neutrals-400">
-                    {experience.role}
-                  </p>
+                  <p className="text-sm text-neutrals-400">{experience.role}</p>
                 </div>
               </div>
 
@@ -121,12 +113,6 @@ export async function SelectedWorkSection({
           </article>
         ))}
       </div>
-
-      {withViewAllButton && groups.length > 0 && (
-        <div className="flex justify-center">
-          <NavButton text="View all work" href="/work" icon={MoveRight} />
-        </div>
-      )}
     </section>
   );
 }

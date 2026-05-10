@@ -62,21 +62,11 @@ export function MobileMenu() {
 
                 <NavigationMenuItem className="w-full">
                   <Navlink
-                    path="/work"
+                    path="/#work"
                     onClick={() => setIsOpen(false)}
                     className="w-full block p-2 transition-all hover:bg-neutrals-100/10 rounded-md"
                   >
                     Selected Work
-                  </Navlink>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem className="w-full">
-                  <Navlink
-                    path="/#experience"
-                    onClick={() => setIsOpen(false)}
-                    className="w-full block p-2 transition-all hover:bg-neutrals-100/10 rounded-md"
-                  >
-                    Experience
                   </Navlink>
                 </NavigationMenuItem>
 

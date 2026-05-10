@@ -4,7 +4,7 @@ const skillGroups = [
   {
     title: "Architecture",
     description:
-      "Domain modeling, modular boundaries, system design trade-offs, maintainability and refactoring.",
+      "Domain modeling, hexagonal architecture, system design trade-offs, maintainability and asynchronous systems.",
     items: [
       "Domain-Driven Design",
       "Clean Architecture",

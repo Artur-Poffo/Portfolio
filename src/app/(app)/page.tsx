@@ -1,6 +1,5 @@
 import { AboutSection } from "@/sections/About";
 import { ContactSection } from "@/sections/Contact";
-import { ExperienceSection } from "@/sections/Experience";
 import { HomeSection } from "@/sections/Home";
 import { SelectedWorkSection } from "@/sections/SelectedWork";
 import { SkillsSection } from "@/sections/Skills";
@@ -12,7 +11,6 @@ export default function Main() {
       <AboutSection />
       <SkillsSection />
       <SelectedWorkSection />
-      <ExperienceSection />
       <ContactSection />
     </>
   );
