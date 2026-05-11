@@ -15,8 +15,29 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Artur Poffo | Portfolio",
-  description: "Portfolio of developer Artur Poffo",
+  title: "Artur Poffo | Software Engineer",
+  description:
+    "Software engineering portfolio of Artur Poffo, focused on scalable SaaS products, clean architecture, TypeScript, React, Node.js, AWS and AI-assisted development.",
+  keywords: [
+    "Artur Poffo",
+    "Software Engineer",
+    "Full-Stack Software Engineer",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "AWS",
+    "Clean Architecture",
+    "AI-assisted development",
+  ],
+  authors: [{ name: "Artur Poffo" }],
+  creator: "Artur Poffo",
+  openGraph: {
+    title: "Artur Poffo | Software Engineer",
+    description:
+      "Software engineering portfolio focused on scalable SaaS products, clean architecture, TypeScript, React, Node.js, AWS and AI-assisted development.",
+    type: "website",
+  },
 };
 
 export default async function RootLayout({

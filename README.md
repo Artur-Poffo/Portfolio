@@ -101,7 +101,7 @@ The following tools were used in the construction of the project:
 
 ## Author
 
-- _**Artur Poffo - Developer**_
+- _**Artur Poffo - Software Engineer**_
 
 [![Linkedin Badge](https://img.shields.io/badge/-Artur-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/arturpoffo/)](https://www.linkedin.com/in/arturpoffo/)
 [![Gmail Badge](https://img.shields.io/badge/-arturpoffop@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:tgmarinho@gmail.com)](mailto:arturpoffop@gmail.com)
