@@ -11,9 +11,9 @@ export function AboutSection() {
   if (!ownerInfo) return null;
 
   return (
-    <section id="about" className="w-full h-screen">
-      <div className="w-full h-full flex flex-col xl:flex-row items-center justify-center gap-10 xl:gap-0">
-        <div className="w-full xl:w-1/2 h-full">
+    <section id="about" className="w-full min-h-[100svh] xl:h-screen">
+      <div className="w-full min-h-[100svh] xl:h-full flex flex-col xl:flex-row items-center justify-center gap-10 xl:gap-0">
+        <div className="w-full h-[42svh] min-h-72 xl:w-1/2 xl:h-full">
           <Image
             src={"/about-image.jpg"}
             width={800}
@@ -23,7 +23,7 @@ export function AboutSection() {
           />
         </div>
 
-        <div className="w-full xl:w-1/2 h-full flex flex-col items-center xl:items-start justify-center gap-4 xl:pl-20">
+        <div className="w-full xl:w-1/2 flex flex-col items-center xl:items-start justify-center gap-4 px-4 pb-14 xl:h-full xl:px-0 xl:pb-0 xl:pl-20">
           <div className="max-w-2xl flex flex-col items-center xl:items-start gap-4">
             <SectionTitle label="About" title={ownerInfo.fullName} />
 

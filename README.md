@@ -12,7 +12,6 @@
 
 <p align="center">
  <a href="#about">About</a> •
- <a href="#layout">Layout</a> • 
  <a href="#how-it-works">How it works</a> • 
  <a href="#tech-stack">Tech Stack</a> • 
  <a href="#author">Author</a>
@@ -21,34 +20,6 @@
 ## About
 
 Portfolio - My updated portfolio contains a little about me, my projects, and experiences
-
----
-
-## Layout
-
-### Home Section
-
-<img src="https://github.com/Artur-Poffo/Portfolio/blob/main/public/README/Home.png?raw=true" alt="Print of Home section" />
-
-### About Section
-
-<img src="https://github.com/Artur-Poffo/Portfolio/blob/main/public/README/About.png?raw=true" alt="Print of About section" />
-
-### Skills Page
-
-<img src="https://github.com/Artur-Poffo/Portfolio/blob/main/public/README/Skills.png?raw=true" alt="Print of skills page" />
-
-### Projects Page
-
-<img src="https://github.com/Artur-Poffo/Portfolio/blob/main/public/README/Projects.png?raw=true" alt="Print of projects page" />
-
-### Experiences Section
-
-<img src="https://github.com/Artur-Poffo/Portfolio/blob/main/public/README/Experiences.png?raw=true" alt="Print of experiences section" />
-
-### Contact Section
-
-<img src="https://github.com/Artur-Poffo/Portfolio/blob/main/public/README/Contact.png?raw=true" alt="Print of contact section" />
 
 ---
 
